@@ -2645,7 +2645,7 @@ body .resistance-studio-visible-heading p strong {
 &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
 &lt;title&gt;مولّد المكعّب فائق الأبعاد | N-D Hypercube Generator&lt;/title&gt;
 &lt;style&gt;
-:root{--bg:#f2f8fa;--panel:#ffffff;--panel2:#eaf5f8;--text:#0b2948;--muted:#526b80;--cyan:#0e7490;--violet:#537b9d;--gold:#c69a3b;--line:#c9dfe7}
+:root{--bg:#071a33;--panel:#ffffff;--panel2:#eaf5f8;--text:#0b2948;--muted:#526b80;--cyan:#0e7490;--violet:#537b9d;--gold:#c69a3b;--line:#c9dfe7}
 *{box-sizing:border-box}
 body{margin:0;background:linear-gradient(180deg,#f5fbfd 0%,#eaf6f9 100%);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.7}
 header{padding:22px max(20px,calc((100% - 1200px)/2));border-bottom:1px solid var(--line);background:linear-gradient(120deg,#e4f4f7,#f8fbfc);border-top:4px solid #0e7490}
@@ -2662,7 +2662,7 @@ button{border:1px solid var(--line);background:var(--panel2);color:var(--text);p
 button:hover,button.active{border-color:var(--cyan);background:#dff2f6}
 .primary{background:linear-gradient(120deg,#0e7490,#155e75);border-color:#0e7490;color:#fff}
 .layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(270px,.8fr);gap:18px}
-canvas{width:100%;height:480px;display:block;border:1px solid #d4e6ec;border-radius:12px;background:radial-gradient(circle,#f8fdff,#eaf4f8 72%);touch-action:none}
+canvas{width:100%;height:620px;display:block;border:1px solid #d4e6ec;border-radius:12px;background:#071a33;touch-action:none}
 .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:12px 0}
 .stat{background:#f5fafc;border:1px solid var(--line);border-radius:11px;padding:10px}
@@ -2679,10 +2679,10 @@ th,td{padding:9px;border-bottom:1px solid var(--line)}
 th{color:var(--cyan);font-weight:600}
 td{color:var(--text);font-variant-numeric:tabular-nums}
 footer{color:var(--muted);font-size:.82rem;padding:22px 0;text-align:center}
-@media(max-width:850px){.layout{grid-template-columns:1fr}canvas{height:390px}}
+@media(max-width:850px){.layout{grid-template-columns:1fr}canvas{height:480px}}
 @media(max-width:520px){.setup{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .slide-caption{margin-top:10px;padding:10px 13px;border:1px solid #b9dbe4;border-right:4px solid #0e7490;border-radius:10px;background:#eef8fa;color:#0b2948;font-weight:800;font-size:.92rem}.slide-caption small{display:block;color:#526b80;font-weight:500;margin-top:3px}
-@media(max-width:760px){.layout{grid-template-columns:1fr}canvas{height:360px}.setup{grid-template-columns:1fr}}
+@media(max-width:760px){.layout{grid-template-columns:1fr}canvas{height:420px}.setup{grid-template-columns:1fr}}
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -2695,8 +2695,8 @@ footer{color:var(--muted);font-size:.82rem;padding:22px 0;text-align:center}
   &lt;section class=&quot;panel setup&quot;&gt;
     &lt;div&gt;
       &lt;label for=&quot;dimension&quot;&gt;أدخل عدد الأبعاد التي تريد رسمها&lt;/label&gt;
-      &lt;input id=&quot;dimension&quot; type=&quot;number&quot; min=&quot;1&quot; max=&quot;10&quot; step=&quot;1&quot; value=&quot;4&quot; inputmode=&quot;numeric&quot;&gt;
-      &lt;p&gt;يمكن اختيار عدد صحيح من 1 إلى 10. الحدّ العملي يحافظ على سلاسة الرسم التفاعلي.&lt;/p&gt;
+      &lt;input id=&quot;dimension&quot; type=&quot;number&quot; min=&quot;1&quot; max=&quot;24&quot; step=&quot;1&quot; value=&quot;4&quot; inputmode=&quot;numeric&quot;&gt;
+      &lt;p&gt;يمكن اختيار عدد صحيح من 1 إلى 24. عند الأبعاد الكبيرة يعرض الرسم مقطعاً بصرياً محدوداً للحفاظ على سرعة المتصفح، بينما تبقى الأعداد الرياضية محسوبة للشكل الكامل.&lt;/p&gt;
     &lt;/div&gt;
     &lt;button class=&quot;primary&quot; id=&quot;generate&quot;&gt;إنشاء الشكل&lt;/button&gt;
   &lt;/section&gt;
@@ -2704,13 +2704,14 @@ footer{color:var(--muted);font-size:.82rem;padding:22px 0;text-align:center}
   &lt;div class=&quot;layout&quot;&gt;
     &lt;section class=&quot;panel&quot;&gt;
       &lt;h2 id=&quot;shapeTitle&quot;&gt;الإسقاط البصري للمكعّب فائق الأبعاد · 4D&lt;/h2&gt;
-      &lt;p&gt;اسحب داخل مساحة الرسم لتدوير الإسقاط، وانقر على أي رأس لتحديده.&lt;/p&gt;
+      &lt;p&gt;اسحب داخل مساحة الرسم لتدوير الإسقاط، وانقر على أي رأس لتحديده. تُعرض تسميات الرؤوس كسلاسل ثنائية من 0 و1.&lt;/p&gt;
       &lt;canvas id=&quot;view&quot; aria-label=&quot;رسم تفاعلي لمكعب فائق الأبعاد&quot;&gt;&lt;/canvas&gt;
       &lt;div class=&quot;actions&quot;&gt;
         &lt;button id=&quot;rotate&quot;&gt;إيقاف الدوران&lt;/button&gt;
         &lt;button id=&quot;reset&quot;&gt;إعادة الضبط&lt;/button&gt;
         &lt;button id=&quot;random&quot;&gt;اختيار رأس عشوائي&lt;/button&gt;
         &lt;button id=&quot;verticesToggle&quot; class=&quot;active&quot;&gt;إظهار الرؤوس&lt;/button&gt;
+        &lt;button id=&quot;labelsToggle&quot; class=&quot;active&quot;&gt;تسميات ثنائية&lt;/button&gt;
         &lt;button id=&quot;edgesToggle&quot; class=&quot;active&quot;&gt;إظهار الأضلاع&lt;/button&gt;
         &lt;button id=&quot;slideshow&quot; class=&quot;primary&quot;&gt;▶ بدء العرض الشرائحي&lt;/button&gt;
       &lt;/div&gt;
@@ -2739,6 +2740,7 @@ footer{color:var(--muted);font-size:.82rem;padding:22px 0;text-align:center}
       &lt;h2 style=&quot;margin-top:18px&quot;&gt;الرؤوس المجاورة&lt;/h2&gt;
       &lt;p&gt;كل ضلع يصل بين رأسين يختلفان في إحداثي واحد فقط.&lt;/p&gt;
       &lt;div id=&quot;neighbors&quot; class=&quot;actions&quot;&gt;&lt;/div&gt;
+      &lt;label for=&quot;vertexLookup&quot; style=&quot;margin-top:12px&quot;&gt;انتقل إلى رأس بترميز ثنائي&lt;/label&gt;&lt;div class=&quot;actions&quot;&gt;&lt;input id=&quot;vertexLookup&quot; type=&quot;text&quot; dir=&quot;ltr&quot; maxlength=&quot;24&quot; placeholder=&quot;مثال: 000101&quot; style=&quot;flex:1;min-width:160px;padding:9px;border:1px solid var(--line);border-radius:9px;font:inherit&quot;&gt;&lt;button id=&quot;vertexGo&quot; type=&quot;button&quot;&gt;تحديد الرأس&lt;/button&gt;&lt;/div&gt;
       &lt;div class=&quot;note&quot;&gt;الرسم إسقاط ثنائي الأبعاد لشكل قد يكون أعلى من ثلاثة أبعاد؛ لذلك قد تتقاطع الخطوط أو تتراكب الرؤوس بصرياً، مع بقاء علاقاتها الرياضية صحيحة.&lt;/div&gt;
     &lt;/aside&gt;
   &lt;/div&gt;
@@ -2758,8 +2760,8 @@ footer{color:var(--muted);font-size:.82rem;padding:22px 0;text-align:center}
 &lt;script&gt;
 const canvas=document.getElementById(&#x27;view&#x27;),ctx=canvas.getContext(&#x27;2d&#x27;);
 const $=id=&gt;document.getElementById(id);
-let n=4,vertices=[],edges=[],points=[],selected=&#x27;&#x27;,angles=[],spinning=true,drag=false,lastX=0,lastY=0,showVertices=true,showEdges=true;
-const MAX_DIM=10;
+let n=4,drawBits=4,vertices=[],edges=[],points=[],selected=&#x27;&#x27;,angles=[],spinning=true,drag=false,lastX=0,lastY=0,showVertices=true,showEdges=true,showLabels=true;
+const MAX_DIM=24, MAX_DRAW_BITS=9;
 
 function choose(a,b){if(b&lt;0||b&gt;a)return 0;let v=1;for(let i=1;i&lt;=b;i++)v=v*(a-i+1)/i;return Math.round(v)}
 function countFaces(k){return k&gt;n?0:choose(n,k)*Math.pow(2,n-k)}
@@ -2767,9 +2769,11 @@ function fmt(v){return Number(v).toLocaleString(&#x27;en-US&#x27;)}
 function build(){
   n=Math.max(1,Math.min(MAX_DIM,Math.floor(Number($(&#x27;dimension&#x27;).value)||1)));
   $(&#x27;dimension&#x27;).value=n;
-  vertices=Array.from({length:2**n},(_,i)=&gt;i.toString(2).padStart(n,&#x27;0&#x27;));
+  // رسم مقطع فرعي متصل من فضاء الأبعاد؛ الإحصاءات أدناه تخص المكعب الكامل.
+  drawBits=Math.min(n,MAX_DRAW_BITS);const drawCount=2**drawBits,prefix=&#x27;0&#x27;.repeat(n-drawBits);
+  vertices=Array.from({length:drawCount},(_,i)=&gt;prefix+i.toString(2).padStart(drawBits,&#x27;0&#x27;));
   edges=[];
-  vertices.forEach(v=&gt;{for(let i=0;i&lt;n;i++){let a=v.split(&#x27;&#x27;);a[i]=a[i]===&#x27;0&#x27;?&#x27;1&#x27;:&#x27;0&#x27;;let u=a.join(&#x27;&#x27;);if(v&lt;u)edges.push([v,u])}});
+  vertices.forEach(v=&gt;{for(let i=n-drawBits;i&lt;n;i++){let a=v.split(&#x27;&#x27;);a[i]=a[i]===&#x27;0&#x27;?&#x27;1&#x27;:&#x27;0&#x27;;let u=a.join(&#x27;&#x27;);if(v&lt;u)edges.push([v,u])}});
   selected=&#x27;0&#x27;.repeat(n);angles=Array.from({length:n},(_,i)=&gt;Array.from({length:n},(_,j)=&gt;i&lt;j?((i+1)*(j+2)%7)*.13:0));
   $(&#x27;shapeTitle&#x27;).textContent=`الإسقاط البصري للمكعّب فائق الأبعاد · ${n}D`;
   $(&#x27;statDim&#x27;).textContent=fmt(n);
@@ -2798,7 +2802,7 @@ function project(bits){
     y+=v[i]*Math.sin(a)*.72;
     z+=v[i]*Math.cos(a*1.7)*.48;
   }
-  const depth=4.8-z*.16,scale=Math.min(canvas.clientWidth,canvas.clientHeight)*.19;
+  const depth=4.8-z*.16,scale=Math.min(canvas.clientWidth,canvas.clientHeight)*.30;
   return {x:canvas.clientWidth/2+(x/depth)*scale,y:canvas.clientHeight/2+(y/depth)*scale,depth:z};
 }
 function resize(){
@@ -2827,7 +2831,7 @@ function draw(){
       ctx.beginPath();ctx.arc(p.x,p.y,chosen?7.5:3.6,0,Math.PI*2);
       ctx.fillStyle=chosen?&#x27;#f5c76b&#x27;:(p.id.includes(&#x27;1&#x27;)?&#x27;#4dd8e8&#x27;:&#x27;#a78bfa&#x27;);
       ctx.shadowColor=chosen?&#x27;#f5c76b&#x27;:&#x27;transparent&#x27;;ctx.shadowBlur=chosen?15:0;ctx.fill();ctx.shadowBlur=0;
-      if(chosen){ctx.fillStyle=&#x27;#fff&#x27;;ctx.font=&#x27;12px Tahoma&#x27;;ctx.textAlign=&#x27;center&#x27;;ctx.fillText(p.id,p.x,p.y-13)}
+      if(showLabels){ctx.fillStyle=chosen?&#x27;#fff&#x27;:&#x27;#dbeafe&#x27;;ctx.font=points.length&gt;160?&#x27;7px Tahoma&#x27;:&#x27;9px Tahoma&#x27;;ctx.textAlign=&#x27;center&#x27;;ctx.fillText(p.id,p.x,p.y-8)}
     });
   }
 }
@@ -2843,7 +2847,14 @@ function explain(){
     const b=document.createElement(&#x27;button&#x27;);b.textContent=id+&#x27; · المحور &#x27;+(i+1);b.onclick=()=&gt;select(id);box.appendChild(b);
   }
 }
-function select(id){selected=id;draw();explain()}
+function select(id){
+  selected=id;
+  const prefix=id.slice(0,n-drawBits),count=2**drawBits;
+  vertices=Array.from({length:count},(_,i)=&gt;prefix+i.toString(2).padStart(drawBits,&#x27;0&#x27;));
+  edges=[];
+  vertices.forEach(v=&gt;{for(let i=n-drawBits;i&lt;n;i++){const a=v.split(&#x27;&#x27;);a[i]=a[i]===&#x27;0&#x27;?&#x27;1&#x27;:&#x27;0&#x27;;const u=a.join(&#x27;&#x27;);if(v&lt;u)edges.push([v,u])}});
+  draw();explain();
+}
 function frame(){
   if(spinning&amp;&amp;!drag){
     for(let i=0;i&lt;n;i++)for(let j=i+1;j&lt;n;j++)angles[i][j]+=.0007*(1+((i+j)%3));
@@ -2865,11 +2876,14 @@ canvas.addEventListener(&#x27;click&#x27;,e=&gt;{
   if(near&amp;&amp;near.dist&lt;20)select(near.id);
 });
 $(&#x27;generate&#x27;).onclick=build;
+$(&#x27;vertexGo&#x27;).onclick=()=&gt;{const v=$(&#x27;vertexLookup&#x27;).value.trim();if(!new RegExp(&#x27;^[01]{&#x27;+n+&#x27;}$&#x27;).test(v)){alert(&#x27;أدخل سلسلة ثنائية بطول &#x27;+n+&#x27; بتاً.&#x27;);return;}select(v)};
+$(&#x27;vertexLookup&#x27;).addEventListener(&#x27;keydown&#x27;,e=&gt;{if(e.key===&#x27;Enter&#x27;)$(&#x27;vertexGo&#x27;).click()});
 $(&#x27;dimension&#x27;).addEventListener(&#x27;keydown&#x27;,e=&gt;{if(e.key===&#x27;Enter&#x27;)build()});
 $(&#x27;rotate&#x27;).onclick=e=&gt;{spinning=!spinning;e.currentTarget.textContent=spinning?&#x27;إيقاف الدوران&#x27;:&#x27;استئناف الدوران&#x27;};
 $(&#x27;reset&#x27;).onclick=()=&gt;{angles=Array.from({length:n},(_,i)=&gt;Array.from({length:n},(_,j)=&gt;i&lt;j?((i+1)*(j+2)%7)*.13:0));select(&#x27;0&#x27;.repeat(n))};
 $(&#x27;random&#x27;).onclick=()=&gt;select(vertices[Math.floor(Math.random()*vertices.length)]);
 $(&#x27;verticesToggle&#x27;).onclick=e=&gt;{showVertices=!showVertices;e.currentTarget.classList.toggle(&#x27;active&#x27;,showVertices);draw()};
+$(&#x27;labelsToggle&#x27;).onclick=e=&gt;{showLabels=!showLabels;e.currentTarget.classList.toggle(&#x27;active&#x27;,showLabels);draw()};
 $(&#x27;edgesToggle&#x27;).onclick=e=&gt;{showEdges=!showEdges;e.currentTarget.classList.toggle(&#x27;active&#x27;,showEdges);draw()};
 const slideButton=$(&#x27;slideshow&#x27;),slideCaption=$(&#x27;slideCaption&#x27;);
 const slideDeck=[
@@ -2900,7 +2914,7 @@ window.addEventListener(&#x27;resize&#x27;,resize);
 build();requestAnimationFrame(frame);
 &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;" sandbox="allow-scripts" loading="lazy" referrerpolicy="no-referrer" style="display:block;width:100%;height:1100px;min-height:760px;border:1px solid #c9dfe7;border-radius:14px;background:#f2f8fa"></iframe></div>
+&lt;/html&gt;" sandbox="allow-scripts" loading="lazy" referrerpolicy="no-referrer" style="display:block;width:100%;height:1280px;min-height:900px;border:1px solid #c9dfe7;border-radius:14px;background:#f2f8fa"></iframe></div>
 <div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" id="kh-lab-two-toggle" type="button" aria-expanded="false" aria-controls="kh-lab-two-content">✦ المختبر الثاني</button><span>Interstellar — موسوعة المفاهيم العلمية (55 مفهوماً)</span></div>
 <div id="kh-lab-two-content" hidden>
  <div class="kh-lab-toolbar"><strong>المختبر الثاني · جميع المفاهيم العلمية في فيلم Interstellar</strong><button class="kh-btn" id="kh-lab-two-hide" type="button">إخفاء المختبر الثاني ✕</button></div>
@@ -2910,6 +2924,65 @@ build();requestAnimationFrame(frame);
  <section class="is-summary"><h3>الخريطة النهائية للمفاهيم العلمية</h3><div class="is-map"><div><b>1 · النسبية والزمكان</b><p>النسبية الخاصة والعامة، تمدد الزمن، الخط العالمي، انحناء الزمكان، مفارقة التوأمين.</p></div><div><b>2 · الثقوب السوداء</b><p>أفق الحدث، التفرد، القرص التراكمي، عدسة الجاذبية، القوى المدّية، سحب الزمكان.</p></div><div><b>3 · الأبعاد والزمن</b><p>الثقوب الدودية، الأبعاد الإضافية، البعد الخامس، التيسراكت، الكون الكتلي، الحلقة الزمنية.</p></div><div><b>4 · فيزياء الكم</b><p>ميكانيكا الكم، الجاذبية الكمومية، المعلومات الكمومية، إشعاع هوكينغ ومفارقة المعلومات.</p></div><div><b>5 · علوم الفضاء</b><p>الحركة المدارية، المناورات بالجاذبية، الزخم الزاوي، الالتحام المداري.</p></div><div><b>6 · علوم الحياة والكواكب</b><p>قابلية السكن، المناطق الصالحة للحياة، الاستصلاح الكوكبي، الاستنبات الجنيني، السبات البشري، الانهيار البيئي.</p></div></div></section>
  <section class="is-summary"><h3>ما مدى صحة الفيلم علمياً؟</h3><div class="is-map"><div><b>مثبتة علمياً</b><p>النسبية، تمدد الزمن، الثقوب السوداء، عدسة الجاذبية، الحركة المدارية والموجات الثقالية.</p></div><div><b>نظرية أو غير مثبتة تجريبياً</b><p>الثقوب الدودية، الأبعاد الإضافية، الجاذبية الكمومية وبعض تصورات الأبعاد الأعلى.</p></div><div><b>خيال سينمائي</b><p>التيسراكت كوسيلة للتواصل مع الماضي، والتحكم بالجاذبية لإرسال رسائل عبر الزمن.</p></div></div><p class="is-note">استعان الفيلم بالفيزيائي النظري كيب ثورن (Kip Thorne) مستشاراً علمياً. ومن المراجع المفيدة كتابه <i>The Science of Interstellar</i>، الذي يناقش الأسس الفيزيائية للفيلم ويفصل بين ما تدعمه المعادلات وما أضافته السينما.</p></section>
  <section class="is-summary"><h3>مسار مقترح للدراسة</h3><ol class="is-study"><li>النسبية الخاصة والعامة.</li><li>تمدد الزمن والجاذبية.</li><li>الثقوب السوداء وأفق الحدث.</li><li>الثقوب الدودية.</li><li>الأبعاد الإضافية والتيسراكت.</li><li>ميكانيكا الكم والجاذبية الكمومية.</li></ol><p class="is-note">يساعد هذا الترتيب على الانتقال من الفيزياء المثبتة إلى الأفكار النظرية، ثم إلى الخيال العلمي المبني عليها.</p></section>
+</div>
+
+<div class="kh-lab-launch is-lab-launch">
+  <button class="kh-btn primary" id="kh-lab-three-toggle" type="button" aria-expanded="false" aria-controls="kh-lab-three-content">▦ المختبر الثالث</button>
+  <span>Pixel Art Studio — تحويل الصور إلى فنّ البيكسل</span>
+</div>
+<div id="kh-lab-three-content" hidden>
+  <div class="kh-lab-toolbar"><strong>المختبر الثالث · محوّل الصور إلى صور بالبيكسلات</strong><button class="kh-btn" id="kh-lab-three-hide" type="button">إخفاء المختبر الثالث ✕</button></div>
+  <div class="kh-pixel-workbench" dir="rtl">
+    <p>حمّل صورة، ثم تحكّم بحجم مربعات البيكسل وشاهد النتيجة مباشرة. تتم المعالجة داخل متصفحك ولا تُرفع الصورة إلى خادم الموقع.</p>
+    <label for="kh-pixel-file">اختر صورة من جهازك</label>
+    <input id="kh-pixel-file" type="file" accept="image/*" hidden>
+    <div class="kh-pixel-controls" style="display:flex;gap:9px;flex-wrap:wrap;align-items:center">
+      <button class="kh-btn" id="kh-pixel-upload" type="button">⬆ رفع صورة</button>
+      <button class="kh-btn primary" id="kh-pixel-convert" type="button" disabled>تحويل إلى Pixel Art</button>
+      <button class="kh-btn" id="kh-pixel-download" type="button" disabled>⬇ تنزيل PNG</button>
+      <label for="kh-pixel-size">حجم البيكسل: <b id="kh-pixel-size-value">12</b></label>
+      <input id="kh-pixel-size" type="range" min="2" max="48" value="12" step="1">
+      <label class="kh-pixel-check"><input id="kh-pixel-palette" type="checkbox"> تقليل الألوان إلى لوحة محدودة</label>
+    </div>
+    <div class="kh-pixel-canvases">
+      <figure><figcaption>الصورة الأصلية</figcaption><canvas id="kh-pixel-original" width="480" height="320"></canvas></figure>
+      <figure><figcaption>النتيجة — Pixel Art</figcaption><canvas id="kh-pixel-result" width="480" height="320"></canvas></figure>
+    </div>
+    <p id="kh-pixel-status" class="kh-app-note" role="status">لم يتم اختيار صورة بعد.</p>
+    <div class="kh-app-reference"><h5>كيف تعمل الأداة؟</h5><ol><li>تصغير الصورة إلى شبكة صغيرة من الخلايا.</li><li>إعادة تكبيرها باستخدام أقرب جار، فتظهر المربعات بحدود واضحة.</li><li>اختيارياً، تقريب الألوان إلى لوحة لونية محدودة للحصول على طابع Pixel Art.</li></ol><p class="kh-app-note">هذه معالجة بصرية للصورة وليست استخراجاً دلالياً لمحتواها. تعتمد النتيجة على حجم البيكسل وجودة الصورة الأصلية.</p></div>
+  </div>
+</div>
+
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" id="kh-lab-four-toggle" type="button" aria-expanded="false" aria-controls="kh-lab-four-content">⌨ المختبر الرابع</button><span>محوّل أنظمة العد — Binary / Octal / Decimal / Hexadecimal</span></div>
+<div id="kh-lab-four-content" hidden>
+ <div class="kh-lab-toolbar"><strong>المختبر الرابع · محوّل أنظمة العد</strong><button class="kh-btn" id="kh-lab-four-hide" type="button">إخفاء المختبر الرابع ✕</button></div>
+ <div class="kh-pixel-workbench" dir="rtl">
+  <p>حوّل الأعداد بين الثنائي والثماني والعشري والسداسي عشري، أو اختر أي أساس من 2 إلى 36. التحويل يعمل في الاتجاهين.</p>
+  <div class="kh-pixel-controls" style="display:flex;gap:10px;flex-wrap:wrap;align-items:end">
+   <label>القيمة المدخلة <input id="kh-base-input" type="text" inputmode="text" placeholder="مثال: 101101" style="display:block;min-width:220px;padding:10px;border:1px solid #cbd5e1;border-radius:9px"></label>
+   <label>من أساس <select id="kh-base-from" style="display:block;padding:10px;border:1px solid #cbd5e1;border-radius:9px"><option value="2">Binary (2)</option><option value="8">Octal (8)</option><option value="10" selected>Decimal (10)</option><option value="16">Hexadecimal (16)</option><option value="32">Base 32</option><option value="36">Base 36</option></select></label>
+   <label>إلى أساس <select id="kh-base-to" style="display:block;padding:10px;border:1px solid #cbd5e1;border-radius:9px"><option value="2">Binary (2)</option><option value="8">Octal (8)</option><option value="10">Decimal (10)</option><option value="16" selected>Hexadecimal (16)</option><option value="32">Base 32</option><option value="36">Base 36</option></select></label>
+   <button class="kh-btn primary" id="kh-base-convert" type="button">تحويل</button><button class="kh-btn" id="kh-base-swap" type="button">⇄ عكس الاتجاه</button>
+  </div>
+  <p id="kh-base-result" class="kh-app-note" role="status" aria-live="polite">أدخل قيمة ثم اضغط «تحويل».</p>
+  <div class="kh-app-reference"><h5>معلومة علمية</h5><p>الأساس 2 يستخدم 0 و1، والأساس 8 يستخدم 0–7، والعشري 0–9، والسداسي عشري 0–9 وA–F. وتدعم الأداة أيضاً الأسس من 2 إلى 36.</p></div>
+ </div>
+</div>
+
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" id="kh-lab-five-toggle" type="button" aria-expanded="false" aria-controls="kh-lab-five-content">▤ المختبر الخامس</button><span>محوّل وحدات البيانات — Bit / Byte / KB / MB / GB / TB / PB / EB / ZB / YB</span></div>
+<div id="kh-lab-five-content" hidden>
+ <div class="kh-lab-toolbar"><strong>المختبر الخامس · محوّل وحدات البيانات</strong><button class="kh-btn" id="kh-lab-five-hide" type="button">إخفاء المختبر الخامس ✕</button></div>
+ <div class="kh-pixel-workbench" dir="rtl">
+  <p>حوّل من البِت إلى البايت ثم وحدات التخزين الكبرى، وبالعكس. تعتمد الأداة النظام العشري SI: كل وحدة أكبر تساوي 1000 من الوحدة السابقة.</p>
+  <div class="kh-pixel-controls" style="display:flex;gap:10px;flex-wrap:wrap;align-items:end">
+   <label>القيمة <input id="kh-unit-input" type="number" min="0" step="any" value="1" style="display:block;min-width:150px;padding:10px;border:1px solid #cbd5e1;border-radius:9px"></label>
+   <label>من <select id="kh-unit-from" style="display:block;padding:10px;border:1px solid #cbd5e1;border-radius:9px"><option value="bit">bit — بِت</option><option value="B" selected>B — Byte</option><option value="KB">KB — Kilobyte</option><option value="MB">MB — Megabyte</option><option value="GB">GB — Gigabyte</option><option value="TB">TB — Terabyte</option><option value="PB">PB — Petabyte</option><option value="EB">EB — Exabyte</option><option value="ZB">ZB — Zettabyte</option><option value="YB">YB — Yottabyte</option></select></label>
+   <label>إلى <select id="kh-unit-to" style="display:block;padding:10px;border:1px solid #cbd5e1;border-radius:9px"><option value="bit">bit — بِت</option><option value="B">B — Byte</option><option value="KB">KB — Kilobyte</option><option value="MB" selected>MB — Megabyte</option><option value="GB">GB — Gigabyte</option><option value="TB">TB — Terabyte</option><option value="PB">PB — Petabyte</option><option value="EB">EB — Exabyte</option><option value="ZB">ZB — Zettabyte</option><option value="YB">YB — Yottabyte</option></select></label>
+   <button class="kh-btn primary" id="kh-unit-convert" type="button">تحويل</button><button class="kh-btn" id="kh-unit-swap" type="button">⇄ عكس الاتجاه</button>
+  </div>
+  <p id="kh-unit-result" class="kh-app-note" role="status" aria-live="polite">أدخل القيمة واختر الوحدتين ثم اضغط «تحويل».</p>
+  <div class="kh-app-reference"><h5>مرجع الوحدات</h5><p>1 Byte = 8 bit. في النظام العشري: KB = 10³ Byte، MB = 10⁶، GB = 10⁹، TB = 10¹²، PB = 10¹⁵، EB = 10¹⁸، ZB = 10²¹، YB = 10²⁴ Byte.</p></div>
+ </div>
 </div>
 </section>
 
@@ -8734,6 +8807,22 @@ function goToBunatAssociation() {
                 }
             });
             map.addControl(new BunatCableControl());
+            // قائمة تعريفية غير تشغيلية للمنشآت النووية؛ لا إحداثيات ولا مسارات وصول.
+            const BunatFacilityInfoControl=L.Control.extend({
+                options:{position:'bottomleft'},
+                onAdd:function(){
+                    const box=L.DomUtil.create('div','leaflet-control bunat-facility-info-control');
+                    box.dir='rtl';box.style.cssText='width:max-content;max-width:min(245px,calc(100vw - 34px));margin-top:5px;font-family:Cairo,Tajawal,sans-serif;';
+                    const toggle=L.DomUtil.create('button','',box);toggle.type='button';toggle.textContent='منشأة';toggle.setAttribute('aria-expanded','false');
+                    toggle.style.cssText='display:block;margin:0 0 6px auto;padding:9px 20px;border:1px solid #075985;border-radius:10px;background:#164e63;color:#fff;font:900 13px Cairo,Tajawal,sans-serif;cursor:pointer;box-shadow:0 3px 10px rgba(15,23,42,.22);';
+                    const panel=L.DomUtil.create('div','',box);panel.hidden=true;panel.dir='rtl';
+                    panel.style.cssText='background:rgba(255,255,255,.98);padding:10px 12px;border:1px solid #cbd5e1;border-radius:12px;box-shadow:0 5px 18px rgba(15,23,42,.22);width:min(245px,calc(100vw - 34px));font:12px/1.8 Cairo,Tajawal,sans-serif;color:#0f172a;';
+                    panel.innerHTML='<strong style="display:block;margin-bottom:6px;color:#0e7490">قائمة تعريفية — أسماء ومواقع عامة</strong><ol style="margin:0;padding:0 20px 0 0"><li><b>Centrale nucléaire de Bouchehr</b> — بوشهر</li><li><b>مفاعل أراك لإنتاج الماء الثقيل</b> — أراك</li><li><b>Natanz Nuclear Facility</b> — نطنز</li></ol><small style="display:block;margin-top:7px;color:#64748b">معلومات تعريفية عامة فقط؛ لا تتضمن إحداثيات دقيقة أو مسارات وصول أو تفاصيل تشغيلية.</small>';
+                    toggle.addEventListener('click',()=>{panel.hidden=!panel.hidden;toggle.setAttribute('aria-expanded',String(!panel.hidden));toggle.style.background=panel.hidden?'#164e63':'#0e7490';});
+                    L.DomEvent.disableClickPropagation(box);L.DomEvent.disableScrollPropagation(box);return box;
+                }
+            });
+            map.addControl(new BunatFacilityInfoControl());
             map.on('move zoom resize',bunatCableRedraw);
             map.whenReady(bunatCableRedraw);
 
@@ -13251,6 +13340,20 @@ window.addEventListener('load',start,{once:true});
 @media(max-width:640px){#bunat-kh-hub .kh-academy-question{padding:10px}#bunat-kh-hub .kh-academy-score strong{font-size:1.5rem}}
 #bunat-kh-hub .kh-lab-launch{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:13px;border:1px solid #c9dfe7;border-radius:14px;background:linear-gradient(120deg,#f7fcfd,#eaf6f9)}#bunat-kh-hub .kh-lab-launch>span{font-size:12px;color:#526b80;font-weight:800}#bunat-kh-hub .kh-lab-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:12px 0;padding:10px 12px;border-radius:12px;background:#eaf6f9;border:1px solid #c9dfe7;color:#0b2948}#bunat-kh-hub #kh-lab-one-content{margin-top:12px}#bunat-kh-hub #kh-lab-one-toggle{min-width:180px;padding:12px 18px;font-size:14px}#bunat-kh-hub #kh-lab-one-toggle[aria-expanded="true"]{background:#0b2948;border-color:#0b2948}
 </style>
+
+<style id="bunat-pixel-lab-styles">
+#bunat-kh-hub .kh-pixel-workbench{margin-top:12px;padding:16px;border:1px solid #c9dfe7;border-radius:15px;background:#fff}
+#bunat-kh-hub .kh-pixel-workbench input[type=file]{display:block;width:100%;padding:10px;border:1px dashed #94a3b8;border-radius:10px;background:#f8fafc}
+#bunat-kh-hub .kh-pixel-controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:14px 0}
+#bunat-kh-hub .kh-pixel-controls input[type=range]{flex:1;min-width:150px;accent-color:#0e7490}
+#bunat-kh-hub .kh-pixel-check{display:flex;align-items:center;gap:7px;margin:0}
+#bunat-kh-hub .kh-pixel-canvases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#bunat-kh-hub .kh-pixel-canvases figure{margin:0;min-width:0;padding:9px;border:1px solid #dbe4ee;border-radius:12px;background:#f8fafc}
+#bunat-kh-hub .kh-pixel-canvases figcaption{font-weight:900;color:#12324b;margin-bottom:8px}
+#bunat-kh-hub .kh-pixel-canvases canvas{display:block;width:100%;height:auto;max-height:520px;object-fit:contain;background:#071a33;border-radius:8px;image-rendering:pixelated}
+@media(max-width:680px){#bunat-kh-hub .kh-pixel-canvases{grid-template-columns:1fr}}
+</style>
+
 <script id="bunat-kh-engine">
 (function(){
  'use strict';
@@ -13271,6 +13374,69 @@ window.addEventListener('load',start,{once:true});
  function toggleLabTwo(show){if(!labTwoToggle||!labTwoContent)return;labTwoContent.hidden=!show;labTwoToggle.setAttribute('aria-expanded',String(show));labTwoToggle.textContent=show?'✦ إخفاء المختبر الثاني':'✦ المختبر الثاني';if(show)labTwoContent.scrollIntoView({behavior:'smooth',block:'nearest'});}
  if(labTwoToggle)labTwoToggle.addEventListener('click',()=>toggleLabTwo(labTwoContent.hidden));
  if(labTwoHide)labTwoHide.addEventListener('click',()=>toggleLabTwo(false));
+
+ const labThreeToggle=$('kh-lab-three-toggle'),labThreeContent=$('kh-lab-three-content'),labThreeHide=$('kh-lab-three-hide');
+ function toggleLabThree(show){if(!labThreeToggle||!labThreeContent)return;labThreeContent.hidden=!show;labThreeToggle.setAttribute('aria-expanded',String(show));labThreeToggle.textContent=show?'▦ إخفاء المختبر الثالث':'▦ المختبر الثالث';if(show)labThreeContent.scrollIntoView({behavior:'smooth',block:'nearest'});}
+ if(labThreeToggle)labThreeToggle.addEventListener('click',()=>toggleLabThree(labThreeContent.hidden));
+ if(labThreeHide)labThreeHide.addEventListener('click',()=>toggleLabThree(false));
+
+ // Pixel-art converter: upload, convert and download are separate explicit actions.
+ const pixelFile=$('kh-pixel-file'),pixelSize=$('kh-pixel-size'),pixelSizeValue=$('kh-pixel-size-value');
+ const pixelPalette=$('kh-pixel-palette'),pixelOriginal=$('kh-pixel-original'),pixelResult=$('kh-pixel-result');
+ const pixelUpload=$('kh-pixel-upload'),pixelConvert=$('kh-pixel-convert'),pixelDownload=$('kh-pixel-download'),pixelStatus=$('kh-pixel-status');
+ let pixelImage=null,pixelObjectUrl=null,pixelReady=false;
+ function renderPixelArt(){
+   if(!pixelImage||!pixelOriginal||!pixelResult)return false;
+   try{
+    const maxW=1200,maxH=900,ratio=Math.min(1,maxW/pixelImage.naturalWidth,maxH/pixelImage.naturalHeight);
+    const w=Math.max(1,Math.round(pixelImage.naturalWidth*ratio)),h=Math.max(1,Math.round(pixelImage.naturalHeight*ratio));
+    [pixelOriginal,pixelResult].forEach(c=>{c.width=w;c.height=h;});
+    const octx=pixelOriginal.getContext('2d'),rctx=pixelResult.getContext('2d');
+    if(!octx||!rctx)throw new Error('تعذر تهيئة مساحة الرسم');
+    octx.clearRect(0,0,w,h);octx.drawImage(pixelImage,0,0,w,h);
+    const block=Math.max(2,Number(pixelSize.value)||12),sw=Math.max(1,Math.ceil(w/block)),sh=Math.max(1,Math.ceil(h/block));
+    const tiny=document.createElement('canvas');tiny.width=sw;tiny.height=sh;
+    const tctx=tiny.getContext('2d',{willReadFrequently:true});if(!tctx)throw new Error('تعذر إنشاء شبكة البيكسل');
+    tctx.imageSmoothingEnabled=true;tctx.drawImage(pixelImage,0,0,sw,sh);
+    if(pixelPalette&&pixelPalette.checked){const data=tctx.getImageData(0,0,sw,sh),d=data.data;for(let i=0;i<d.length;i+=4){for(let c=0;c<3;c++)d[i+c]=Math.min(255,Math.round(d[i+c]/64)*64);}tctx.putImageData(data,0,0);}
+    rctx.imageSmoothingEnabled=false;rctx.clearRect(0,0,w,h);rctx.drawImage(tiny,0,0,sw,sh,0,0,w,h);
+    if(pixelSizeValue)pixelSizeValue.textContent=String(block);
+    pixelReady=true;if(pixelDownload)pixelDownload.disabled=false;
+    if(pixelStatus)pixelStatus.textContent=`اكتمل التحويل: شبكة ${sw} × ${sh} خلية تقريباً.`;
+    return true;
+   }catch(err){pixelReady=false;if(pixelDownload)pixelDownload.disabled=true;if(pixelStatus)pixelStatus.textContent='تعذر تحويل الصورة: '+(err.message||'خطأ غير معروف');return false;}
+ }
+ if(pixelUpload&&pixelFile)pixelUpload.addEventListener('click',()=>pixelFile.click());
+ if(pixelFile)pixelFile.addEventListener('change',()=>{
+   const file=pixelFile.files&&pixelFile.files[0];if(!file)return;
+   if(!file.type||!file.type.startsWith('image/')){if(pixelStatus)pixelStatus.textContent='يرجى اختيار ملف صورة صالح.';pixelFile.value='';return;}
+   if(pixelObjectUrl)URL.revokeObjectURL(pixelObjectUrl);
+   pixelReady=false;if(pixelDownload)pixelDownload.disabled=true;if(pixelConvert)pixelConvert.disabled=true;
+   pixelObjectUrl=URL.createObjectURL(file);const nextImage=new Image();
+   nextImage.onload=()=>{pixelImage=nextImage;if(pixelConvert)pixelConvert.disabled=false;if(pixelStatus)pixelStatus.textContent='تم رفع الصورة بنجاح. اضغط «تحويل إلى Pixel Art» لبدء المعالجة.';};
+   nextImage.onerror=()=>{pixelImage=null;if(pixelStatus)pixelStatus.textContent='تعذر فتح الصورة. جرّب صيغة PNG أو JPG أو WebP.';};
+   nextImage.src=pixelObjectUrl;
+ });
+ if(pixelConvert)pixelConvert.addEventListener('click',renderPixelArt);
+ [pixelSize,pixelPalette].forEach(el=>el&&el.addEventListener('input',()=>{if(pixelImage)renderPixelArt();}));
+ if(pixelDownload)pixelDownload.addEventListener('click',()=>{
+   if(!pixelReady||!pixelResult)return;
+   pixelResult.toBlob(blob=>{if(!blob){if(pixelStatus)pixelStatus.textContent='تعذر إنشاء ملف PNG.';return;}const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='bunat-pixel-art.png';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);},'image/png');
+ });
+
+ // Shared open/close behavior for the two new conversion laboratories.
+ [['four','kh-lab-four-toggle','kh-lab-four-content','kh-lab-four-hide','⌨ المختبر الرابع'],['five','kh-lab-five-toggle','kh-lab-five-content','kh-lab-five-hide','▤ المختبر الخامس']].forEach(([,tid,cid,hid,label])=>{const t=$(tid),c=$(cid),h=$(hid);const set=open=>{if(!t||!c)return;c.hidden=!open;t.setAttribute('aria-expanded',String(open));t.textContent=open?'إخفاء '+label.replace('المختبر','المختبر')+' ✕':label;if(open)c.scrollIntoView({behavior:'smooth',block:'nearest'});};if(t&&c)t.addEventListener('click',()=>set(c.hidden));if(h)h.addEventListener('click',()=>set(false));});
+
+ // Number-base converter (2–36), using BigInt for exact integer conversion.
+ const baseInput=$('kh-base-input'),baseFrom=$('kh-base-from'),baseTo=$('kh-base-to'),baseResult=$('kh-base-result');
+ function convertBase(){if(!baseInput||!baseFrom||!baseTo||!baseResult)return;const raw=baseInput.value.trim().replace(/\s+/g,'');const from=Number(baseFrom.value),to=Number(baseTo.value);if(!raw){baseResult.textContent='أدخل عدداً أولاً.';return;}try{let sign=1n,body=raw.toUpperCase();if(body[0]==='-'){sign=-1n;body=body.slice(1);}else if(body[0]==='+')body=body.slice(1);if(!body)throw Error('القيمة غير مكتملة');const alphabet='0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';let n=0n;for(const ch of body){const digit=alphabet.indexOf(ch);if(digit<0||digit>=from)throw Error(`الرمز ${ch} غير صالح للأساس ${from}`);n=n*BigInt(from)+BigInt(digit);}n*=sign;const out=n===0n?'0':(n<0n?'-':'')+(n<0n?-n:n).toString(to).toUpperCase();baseResult.textContent=`النتيجة: ${out} (أساس ${to})`; }catch(e){baseResult.textContent='قيمة غير صالحة: '+e.message;}}
+ $('kh-base-convert')?.addEventListener('click',convertBase);$('kh-base-swap')?.addEventListener('click',()=>{const v=baseFrom.value;baseFrom.value=baseTo.value;baseTo.value=v;convertBase();});
+
+ // Data-size converter: SI decimal units, with bit/byte distinction.
+ const unitFactors={bit:0.125,B:1,KB:1e3,MB:1e6,GB:1e9,TB:1e12,PB:1e15,EB:1e18,ZB:1e21,YB:1e24};
+ function convertDataUnit(){const input=$('kh-unit-input'),from=$('kh-unit-from'),to=$('kh-unit-to'),out=$('kh-unit-result');if(!input||!from||!to||!out)return;const v=Number(input.value);if(!Number.isFinite(v)||v<0){out.textContent='أدخل قيمة رقمية صحيحة تساوي صفراً أو أكثر.';return;}const result=v*unitFactors[from.value]/unitFactors[to.value];out.textContent=`النتيجة: ${new Intl.NumberFormat('en-US',{maximumSignificantDigits:12}).format(result)} ${to.value}`;}
+ $('kh-unit-convert')?.addEventListener('click',convertDataUnit);$('kh-unit-swap')?.addEventListener('click',()=>{const f=$('kh-unit-from'),t=$('kh-unit-to');const v=f.value;f.value=t.value;t.value=v;convertDataUnit();});
+
  const isSearch=$('is-search'),isConcepts=()=>Array.from(root.querySelectorAll('[data-is-concept]'));
  function filterIS(){const q=(isSearch?.value||'').trim().toLocaleLowerCase('ar');let n=0;isConcepts().forEach(d=>{const match=!q||d.innerText.toLocaleLowerCase('ar').includes(q);d.hidden=!match;if(match)n++;});const count=$('is-result-count');if(count)count.textContent=n+' من 55 مفهوماً';}
  if(isSearch)isSearch.addEventListener('input',filterIS);
