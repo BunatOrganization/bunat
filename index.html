@@ -1756,6 +1756,17 @@ body .resistance-studio-visible-heading p strong {
 #kh-quantum-suite .qz-layer li{margin:.45rem 0;line-height:1.9}
 </style>
 <style id="quantum-suite-styles">#kh-quantum-suite{margin-top:18px;display:grid;gap:14px}#kh-quantum-suite [hidden]{display:none!important}#kh-quantum-suite .qz-panel-switches,#kh-quantum-suite .qz-category-grid{display:flex;flex-wrap:wrap;gap:9px}#kh-quantum-suite .qz-panel-switches .kh-btn,#kh-quantum-suite .qz-category{flex:1 1 220px}#kh-quantum-suite .qz-panel-switches .kh-btn[aria-expanded=true]{background:#12345a;color:white}#kh-quantum-suite .qz-subpanel{border:1px solid #cbd5e1;border-radius:16px;padding:15px;background:white}#kh-quantum-suite input{max-width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:10px;font:inherit}#kh-quantum-suite .qz-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:12px;max-height:520px;overflow:auto}#kh-quantum-suite .qz-item{border:1px solid #dbeafe;border-radius:11px;background:#f0f9ff;padding:10px;color:#12345a;text-align:right;font:800 12px/1.7 inherit;cursor:pointer}#kh-quantum-suite .qz-item small{display:block;color:#64748b;font-size:10px}#kh-quantum-suite .qz-item.active{border-color:#0e7490;background:#e0f2fe}#kh-quantum-suite .qz-view{margin-top:14px;padding:16px;border:1px solid #cbd5e1;border-radius:15px;background:#f8fafc;line-height:1.9}#kh-quantum-suite .qz-view h4{font-size:1.15rem;font-weight:900;color:#0b2948}#kh-quantum-suite .qz-art{display:grid;place-items:center;min-height:175px;margin-bottom:14px;border-radius:13px;background:radial-gradient(circle,#164e63,#0b1730 72%)}#kh-quantum-suite .qz-art svg{width:min(100%,540px);height:175px}#kh-quantum-suite .qz-art{display:flex;flex-direction:column;justify-content:center;gap:5px;min-height:205px;padding:8px 10px}#kh-quantum-suite .qz-art svg{flex:0 0 auto;height:175px}#kh-quantum-suite .qz-art figcaption{width:100%;padding:0 8px 5px;color:#d8eaf7;text-align:center;font-size:12px;line-height:1.6}#kh-quantum-suite .qz-layer{padding:10px 12px;margin:8px 0;border-right:4px solid #0e7490;border-radius:8px;background:#f1f5f9}#kh-quantum-suite .qz-category{padding:13px;border:1px solid #cbd5e1;border-radius:12px;background:#f8fafc}#kh-quantum-suite .qz-category button{width:100%;margin-top:8px}#kh-quantum-suite .qz-problem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:6px;max-height:450px;overflow:auto}#kh-quantum-suite .qz-note{padding:10px;background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;color:#78350f}#kh-quantum-suite .qz-source{color:#075985;text-decoration:underline;font-weight:800}@media(max-width:700px){#kh-quantum-suite .qz-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#kh-quantum-suite .qz-category-grid{display:grid;grid-template-columns:1fr}}</style>
+
+<style id="radio-arabic-gold-pulse">
+@keyframes radioArabicGoldPulse {
+  0%, 100% { color:#d49b00; text-shadow:0 0 3px rgba(255,205,45,.45), 0 0 8px rgba(255,190,0,.22); }
+  50% { color:#ffdf32; text-shadow:0 0 7px rgba(255,218,55,.95), 0 0 17px rgba(255,190,0,.8), 0 0 28px rgba(255,190,0,.45); }
+}
+#bunat-kh-hub .kh-card[data-kh-open="radio-arabic"] strong { color:#d49b00 !important; animation:radioArabicGoldPulse 1.25s ease-in-out infinite; font-weight:1000; }
+#bunat-kh-hub .kh-card[data-kh-open="radio-arabic"] .kh-icon { background:#fff6cf; color:#d49b00; box-shadow:0 0 10px rgba(255,196,0,.28); }
+#bunat-kh-hub .kh-card[data-kh-open="radio-arabic"] { border-color:#e8c34c; }
+@media (prefers-reduced-motion: reduce) { #bunat-kh-hub .kh-card[data-kh-open="radio-arabic"] strong { animation:none; color:#d49b00 !important; } }
+</style>
 </head>
 <!-- BODY: website content -->
 <body class="antialiased selection:bg-cyan-500 selection:text-white">
@@ -2374,8 +2385,24 @@ body .resistance-studio-visible-heading p strong {
 <button class="kh-card" data-kh-open="crisis-informatics" type="button"><span class="kh-icon">⌘</span><strong>المعلوماتية لإدارة الأزمات</strong><small>تحليل جغرافي، تحسين الموارد، محاكاة السيناريوهات، وحماية الاتصالات مع تمييز التقنيات المتاحة عن البحثية.</small></button>
 <button class="kh-card" data-kh-open="quantum-suite" type="button"><span class="kh-icon">✦</span><strong>موسوعة المعلوماتية الكمية</strong><small>موسوعة تعليمية تفاعلية من الأسس إلى موضوعات البحث الكمي.</small></button>
 <button class="kh-card" data-kh-open="quantum-dilemmas" type="button"><span class="kh-icon">◈</span><strong>معضلات المعلوماتية</strong><small>فهرس QIQCOP الأصلي: أسماء المسائل ونصوصها وحالتها وتقدمها ومراجعها.</small></button>
+<button class="kh-card" data-kh-open="radio-arabic" type="button"><span class="kh-icon">♫</span><strong>منبر العربية</strong><small>اكتب كلمة بالفارسية أو انطقها، لتحصل على ترجمتها بالعربية وتسمع لفظها.</small></button>
 </div>
 <div id="kh-quantum-suite" dir="rtl"><section class="kh-panel" data-kh-panel="quantum-suite"><section class="qz-subpanel" id="qz-encyclopedia"><h3>موسوعة المعلوماتية الكمية</h3><p class="kh-muted">100 عنوان في عشرة مستويات. اختر عنواناً لفتح بطاقة تعليمية مصوّرة تتضمن الفهم والرياضيات والتجربة وما يزال مجهولاً.</p><label for="qz-topic-search">ابحث في العناوين المئة</label><input id="qz-topic-search" type="search" placeholder="اكتب كلمة من العنوان…"><span id="qz-topic-count">100 عنوان</span><div class="qz-grid" id="qz-topic-grid"></div><article class="qz-view" id="qz-topic-view" aria-live="polite"><p>اختر أحد العناوين المئة لعرض مادته التعليمية.</p></article></section></section><section class="kh-panel" data-kh-panel="quantum-dilemmas"><section class="qz-subpanel" id="qz-dilemmas"><h3>معضلات المعلوماتية</h3><p class="kh-muted">هذا القسم محصور في التصنيفات الثلاثة التالية.</p><div class="qz-category-grid"><div class="qz-category"><b>1. ما أثبته العلم</b><p>نتائج ونظريات مدعومة ببراهين رياضية أو اختبارات تجريبية، مثل مبرهنة عدم الاستنساخ والتشابك ومتباينات بيل.</p><button class="kh-btn" data-qz-evidence="proved" type="button">عرض هذا القسم</button></div><div class="qz-category"><b>2. ما نستخدمه دون تفسير نهائي</b><p>أدوات ونتائج نستخدمها بنجاح ونحسب بها تنبؤات دقيقة، مع بقاء أسئلة تفسيرية مفتوحة حول القياس والحالة الكمية وأساس الاحتمالات.</p><button class="kh-btn" data-qz-evidence="interpretation" type="button">عرض هذا القسم</button></div><div class="qz-category"><b>3. ما لا يزال مفتوحاً للبحث</b><p>مسائل لم يُحسم جوابها بعد في مجالات السعة والحوسبة والموارد والأسس الكمية.</p><button class="kh-btn" data-qz-evidence="open" type="button">فتح المسائل البحثية</button></div></div><div class="qz-view" id="qz-evidence-view" hidden></div><section class="qz-subpanel" id="qz-open-records" hidden><h4>فهرس المسائل البحثية في مستودع QIQCOP Zoo</h4><p>يُحمّل هذا الفهرس أسماء المسائل وحالاتها ونصوصها من واجهة البيانات الرسمية. قد تتغير الأعداد والعناوين مع تحديث المستودع.</p><div class="qz-category-grid"><div class="qz-category"><b>المسائل المصنّفة محلولة</b><button class="kh-btn" id="qz-solved-toggle" type="button">عرض المسائل المحلولة</button></div><div class="qz-category"><b>المسائل المصنّفة غير محلولة</b><button class="kh-btn" id="qz-unsolved-toggle" type="button">عرض المسائل غير المحلولة</button></div></div><input id="qz-problem-filter" class="qz-problem-search" type="search" placeholder="ابحث باسم المسألة أو نصها…"><div class="qz-problem-grid" id="qz-solved-grid" hidden></div><div class="qz-problem-grid" id="qz-unsolved-grid" hidden></div><div class="qz-view" id="qz-problem-view" hidden></div><p class="qz-note" id="qz-api-status" aria-live="polite">جارٍ تحميل فهرس المسائل…</p><a class="qz-source" href="https://qiqc-op.com/problems/" target="_blank" rel="noopener">فتح المستودع الأصلي QIQCOP Zoo ↗</a></section></section></section></div>
+
+<section class="kh-panel" data-kh-panel="radio-arabic" id="kh-radio-arabic" dir="rtl">
+
+ <div class="ra-head">
+  <span class="ra-spark">✦ ♫ ✦</span>
+  <h3 style="color: white !important; -webkit-text-fill-color: white !important;">منبر العربية</h3>
+
+<p>اكتب بالفارسية، أو استخدم الميكروفون.</p></div>
+ <label for="ra-persian">الكلمة أو العبارة بالفارسية</label>
+ <div class="ra-inputrow"><input id="ra-persian" type="text" lang="fa" dir="rtl" autocomplete="off" placeholder="مثال: خدا، دوست، کتاب"><button type="button" class="kh-btn" id="ra-translate">ترجم وانطق</button><button type="button" class="kh-btn" id="ra-mic" title="إملاء صوتي بالفارسية">🎙️ تحدث</button></div>
+ <p id="ra-status" class="kh-muted" aria-live="polite">أدخل النص الفارسي ثم اضغط «ترجم وانطق». يتطلب الاتصال بالإنترنت للترجمة.</p>
+ <div class="ra-result" id="ra-result" hidden><span>الترجمة بالعربية</span><strong id="ra-arabic" lang="ar"></strong><div class="ra-actions"><button type="button" class="kh-btn" id="ra-speak">🔊 استمع إلى النطق العربي</button><button type="button" class="kh-btn" id="ra-copy">نسخ الترجمة</button></div></div>
+ <p class="ra-note">ملاحظة: الترجمة تتم عبر خدمة ترجمة على الإنترنت؛ لا تُرسل كلمات خاصة أو سرية. جودة الترجمة قد تختلف بحسب السياق.</p>
+</section>
+
 <section class="kh-panel" data-kh-panel="applications" id="kh-applications-panel" dir="rtl">
   <h3>▦ التطبيقات</h3>
   <p class="kh-muted">اختر أحد التطبيقين لفتح واجهته. التطبيق الأول نموذج رياضي تفاعلي للمكعب الفائق رباعي الأبعاد، والثاني لاستخراج النصوص من الصور باستخدام Tesseract OCR.</p>
@@ -2638,7 +2665,7 @@ body .resistance-studio-visible-heading p strong {
 <label class="kh-row"><input data-kh-check="log" type="checkbox"/> <span>توثيق القرارات والمهام والمسؤولين والتوقيت.</span></label>
 <label class="kh-row"><input data-kh-check="review" type="checkbox"/> <span>إجراء مراجعة بعد النشاط وتسجيل الدروس المستفادة.</span></label>
 </div><div class="kh-progress"><i id="kh-check-progress"></i></div><div class="kh-muted" id="kh-check-status">0 من 7 عناصر مكتملة</div><div class="kh-actions"><button class="kh-btn" id="kh-check-reset" type="button">إعادة ضبط</button><button class="kh-btn primary" data-kh-print="protocol" type="button">طباعة قائمة التحقق</button></div></section>
-<section class="kh-panel" data-kh-panel="research-lab"><h3>مختبر البحث العلمي</h3><p class="kh-muted">اختر المختبر الذي تريد تشغيله. يظهر محتوى الأداة عند الطلب ويمكن إخفاؤه مجدداً.</p><div class="kh-lab-launch"><button class="kh-btn primary" id="kh-lab-one-toggle" type="button" aria-expanded="false" aria-controls="kh-lab-one-content">⌬ المختبر الأول</button><span>المكعّب فائق الأبعاد — Hypercube Generator</span></div><div id="kh-lab-one-content" hidden><div class="kh-lab-toolbar"><strong>المختبر الأول · مولّد المكعّب فائق الأبعاد</strong><button class="kh-btn" id="kh-lab-one-hide" type="button">إخفاء المختبر الأول ✕</button></div><iframe title="مولّد المكعّب فائق الأبعاد" srcdoc="&lt;!doctype html&gt;
+<section class="kh-panel" data-kh-panel="research-lab"><h3>مختبر البحث العلمي</h3><p class="kh-muted">اختر المختبر الذي تريد تشغيله. يظهر محتوى الأداة عند الطلب ويمكن إخفاؤه مجدداً.</p><div class="kh-lab-launch"><button class="kh-btn primary" id="kh-lab-one-toggle" type="button" aria-expanded="false" aria-controls="kh-lab-one-content">✧ 01 · المختبر الأول</button><span>المكعّب فائق الأبعاد — Hypercube Generator</span></div><div id="kh-lab-one-content" hidden><div class="kh-lab-toolbar"><strong>المختبر الأول · مولّد المكعّب فائق الأبعاد</strong><button class="kh-btn" id="kh-lab-one-hide" type="button">إخفاء المختبر الأول ✕</button></div><iframe title="مولّد المكعّب فائق الأبعاد" srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;ar&quot; dir=&quot;rtl&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;utf-8&quot;&gt;
@@ -2915,7 +2942,7 @@ build();requestAnimationFrame(frame);
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;" sandbox="allow-scripts" loading="lazy" referrerpolicy="no-referrer" style="display:block;width:100%;height:1280px;min-height:900px;border:1px solid #c9dfe7;border-radius:14px;background:#f2f8fa"></iframe></div>
-<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" id="kh-lab-two-toggle" type="button" aria-expanded="false" aria-controls="kh-lab-two-content">✦ المختبر الثاني</button><span>Interstellar — موسوعة المفاهيم العلمية (55 مفهوماً)</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" id="kh-lab-two-toggle" type="button" aria-expanded="false" aria-controls="kh-lab-two-content">✦ 02 · المختبر الثاني</button><span>Interstellar — موسوعة المفاهيم العلمية (55 مفهوماً)</span></div>
 <div id="kh-lab-two-content" hidden>
  <div class="kh-lab-toolbar"><strong>المختبر الثاني · جميع المفاهيم العلمية في فيلم Interstellar</strong><button class="kh-btn" id="kh-lab-two-hide" type="button">إخفاء المختبر الثاني ✕</button></div>
  <div class="is-hero"><div class="is-eyebrow">مختبر الفيزياء والفضاء</div><h2>رحلة علمية عبر فيلم بين النجوم</h2><p>الفيلم ليس مجرد حكاية عن السفر إلى الفضاء؛ بل مدخل إلى النسبية والزمكان والثقوب السوداء والجاذبية والأبعاد الإضافية وعلوم الكواكب. افتح كل مفهوم لقراءة تعريفه، وآلية عمله، وموضع ظهوره في الفيلم، وحالته العلمية.</p><div class="is-stats"><span><b>55</b> مفهوماً</span><span><b>6</b> أقسام</span><span><b>3</b> مستويات للحالة العلمية</span></div></div>
@@ -2927,7 +2954,7 @@ build();requestAnimationFrame(frame);
 </div>
 
 <div class="kh-lab-launch is-lab-launch">
-  <button class="kh-btn primary" id="kh-lab-three-toggle" type="button" aria-expanded="false" aria-controls="kh-lab-three-content">▦ المختبر الثالث</button>
+  <button class="kh-btn primary" id="kh-lab-three-toggle" type="button" aria-expanded="false" aria-controls="kh-lab-three-content">❖ 03 · المختبر الثالث</button>
   <span>Pixel Art Studio — تحويل الصور إلى فنّ البيكسل</span>
 </div>
 <div id="kh-lab-three-content" hidden>
@@ -2953,7 +2980,7 @@ build();requestAnimationFrame(frame);
   </div>
 </div>
 
-<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" id="kh-lab-four-toggle" type="button" aria-expanded="false" aria-controls="kh-lab-four-content">⌨ المختبر الرابع</button><span>محوّل أنظمة العد — Binary / Octal / Decimal / Hexadecimal</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" id="kh-lab-four-toggle" type="button" aria-expanded="false" aria-controls="kh-lab-four-content">⌘ 04 · المختبر الرابع</button><span>محوّل أنظمة العد — Binary / Octal / Decimal / Hexadecimal</span></div>
 <div id="kh-lab-four-content" hidden>
  <div class="kh-lab-toolbar"><strong>المختبر الرابع · محوّل أنظمة العد</strong><button class="kh-btn" id="kh-lab-four-hide" type="button">إخفاء المختبر الرابع ✕</button></div>
  <div class="kh-pixel-workbench" dir="rtl">
@@ -2969,7 +2996,7 @@ build();requestAnimationFrame(frame);
  </div>
 </div>
 
-<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" id="kh-lab-five-toggle" type="button" aria-expanded="false" aria-controls="kh-lab-five-content">▤ المختبر الخامس</button><span>محوّل وحدات البيانات — Bit / Byte / KB / MB / GB / TB / PB / EB / ZB / YB</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" id="kh-lab-five-toggle" type="button" aria-expanded="false" aria-controls="kh-lab-five-content">◈ 05 · المختبر الخامس</button><span>محوّل وحدات البيانات — Bit / Byte / KB / MB / GB / TB / PB / EB / ZB / YB</span></div>
 <div id="kh-lab-five-content" hidden>
  <div class="kh-lab-toolbar"><strong>المختبر الخامس · محوّل وحدات البيانات</strong><button class="kh-btn" id="kh-lab-five-hide" type="button">إخفاء المختبر الخامس ✕</button></div>
  <div class="kh-pixel-workbench" dir="rtl">
@@ -2984,6 +3011,212 @@ build();requestAnimationFrame(frame);
   <div class="kh-app-reference"><h5>مرجع الوحدات</h5><p>1 Byte = 8 bit. في النظام العشري: KB = 10³ Byte، MB = 10⁶، GB = 10⁹، TB = 10¹²، PB = 10¹⁵، EB = 10¹⁸، ZB = 10²¹، YB = 10²⁴ Byte.</p></div>
  </div>
 </div>
+
+<div class="kh-lab-launch is-lab-launch">
+<button class="kh-btn primary" id="kh-lab-six-toggle" type="button" aria-expanded="false" aria-controls="kh-lab-six-content">✺ 06 · المختبر السادس</button>
+<span>مختبر الأعداد الأولية — Prime Numbers &amp; Gap Explorer</span>
+</div>
+<div id="kh-lab-six-content" hidden>
+<div class="kh-lab-toolbar"><strong>المختبر السادس · مختبر الأعداد الأولية ومحاكاة الفجوات</strong><button class="kh-btn" id="kh-lab-six-hide" type="button">إخفاء المختبر السادس ✕</button></div>
+<div class="kh-prime-lab" dir="rtl">
+<header class="kh-prime-hero"><span>NUMBER THEORY · RESEARCH SIMULATION</span><h2>هل تخفي الفجوات بين الأعداد الأولية نظاماً؟</h2><p>استكشف الأعداد الأولية، والفجوات المتتالية، والأزواج التوأمية، وكثافة الأعداد الأولية ضمن نطاق قابل للتغيير.</p></header>
+<div class="kh-prime-theory">
+<h4>ما العدد الأولي؟</h4><p>عدد صحيح أكبر من 1 لا يقبل القسمة إلا على 1 وعلى نفسه. من أمثلته: 2، 3، 5، 7، 11، 13، 17، 19، 23، 29، 31، 37.</p>
+<h4>ما معضلة الفجوات؟</h4><p>الفارق بين كل عددين أوليين متتاليين ليس ثابتاً. ثبت أن الفجوات غير محدودة من حيث الحجم، بينما لا تزال حدسية الأعداد الأولية التوأم تسأل عما إذا كان هناك عدد لا نهائي من الأزواج التي يفصل بينها 2.</p>
+<h4>فرضية ريمان</h4><p>ترتبط بدقة فهم توزيع الأعداد الأولية عبر الأصفار غير البديهية لدالة زيتا. وهي مسألة مفتوحة؛ لا تعرض هذه المحاكاة حلاً لها.</p>
+</div>
+<div class="kh-prime-controls">
+<label>ابحث حتى العدد <input id="kh-prime-limit" type="number" min="50" max="200000" step="50" value="1000"></label>
+<label>عدد الفجوات المعروضة <select id="kh-prime-count"><option>10</option><option selected>20</option><option>40</option><option>80</option></select></label>
+<button class="kh-btn primary" id="kh-prime-run" type="button">حلّل النطاق</button>
+<button class="kh-btn" id="kh-prime-reset" type="button">إعادة الضبط</button>
+</div>
+<div class="kh-prime-stats" id="kh-prime-stats" aria-live="polite"></div>
+<div class="kh-prime-chart-wrap"><h4>مخطط الفجوات بين الأعداد الأولية المتتالية</h4><canvas id="kh-prime-chart" width="1100" height="300" aria-label="مخطط فجوات الأعداد الأولية"></canvas><p class="kh-app-note" id="kh-prime-chart-note">كل نقطة تمثل الفجوة بعد عدد أولي؛ لاحظ كيف تتغير الفجوات مع تزايد الأعداد.</p></div>
+<div class="kh-prime-table-wrap"><h4>جدول الأعداد الأولية والفوارق</h4><div class="kh-prime-table-scroll"><table class="kh-prime-table"><thead><tr><th>العدد الأولي</th><th>الأولي التالي</th><th>الفجوة</th><th>زوج توأمي؟</th></tr></thead><tbody id="kh-prime-rows"></tbody></table></div></div>
+<div class="kh-prime-conclusion" id="kh-prime-conclusion"></div>
+<div class="kh-prime-note"><b>حدود المحاكاة:</b> الحساب هنا دقيق للأعداد الصحيحة ضمن النطاق المدخل باستخدام غربال إراتوستينس، لكنه استكشاف عددي محدود وليس برهاناً رياضياً. لا يمكن استنتاج لا نهائية الأزواج التوأمية أو إثبات فرضية ريمان من الرسم.</div>
+</div>
+</div>
+
+
+<style id="kh-prime-and-advanced-labs-style">
+#kh-research-advanced-labs{margin-top:10px}
+#kh-research-advanced-labs [hidden],#kh-lab-six-content[hidden]{display:none!important}
+.kh-prime-lab,.kh-advanced-lab{margin:12px 0 20px;padding:clamp(12px,2vw,22px);border:1px solid #bfdbfe;border-radius:18px;background:linear-gradient(180deg,#f8fbff,#fff);color:#0f2942}
+.kh-prime-hero{padding:18px;border-radius:14px;background:linear-gradient(120deg,#082f49,#164e83);color:#fff}
+.kh-prime-hero span{font-size:11px;font-weight:900;color:#bae6fd;letter-spacing:.08em}
+.kh-prime-hero h2{margin:5px 0;font-size:clamp(19px,3vw,27px);font-weight:900;color:white}
+.kh-prime-hero p{color:#dbeafe;line-height:1.8}
+.kh-prime-theory{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:12px 0}
+.kh-prime-theory h4{font-weight:900;color:#075985;margin:0 0 4px}
+.kh-prime-theory p{font-size:13px;line-height:1.85;margin:0}
+.kh-prime-theory>div{padding:12px;border:1px solid #dbeafe;border-radius:12px;background:white}
+.kh-prime-controls,.kh-advanced-controls{display:flex;gap:10px;align-items:end;flex-wrap:wrap;padding:13px;border:1px solid #dbeafe;border-radius:12px;background:#eff6ff}
+.kh-prime-controls label,.kh-advanced-controls label{display:grid;gap:5px;font-size:12px;font-weight:800;color:#334155}
+.kh-prime-controls input,.kh-prime-controls select,.kh-advanced-controls input{padding:9px 11px;border:1px solid #cbd5e1;border-radius:9px;background:white;font:inherit;min-width:120px}
+.kh-prime-stats,.kh-advanced-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:12px 0}
+.kh-prime-stat,.kh-advanced-stat{padding:12px;border:1px solid #dbeafe;border-radius:11px;background:white}
+.kh-prime-stat small,.kh-advanced-stat small{display:block;color:#64748b;font-size:11px}
+.kh-prime-stat strong,.kh-advanced-stat strong{display:block;color:#0c4a6e;font-size:22px;font-weight:900;font-variant-numeric:tabular-nums}
+.kh-prime-chart-wrap,.kh-prime-table-wrap,.kh-advanced-visual{padding:13px;margin:12px 0;border:1px solid #dbeafe;border-radius:13px;background:white}
+.kh-prime-chart-wrap canvas,.kh-advanced-visual canvas{width:100%;height:280px;display:block;background:#f8fafc;border-radius:9px}
+.kh-prime-table-scroll{overflow-x:auto}
+.kh-prime-table{width:100%;border-collapse:collapse;text-align:center;font-size:13px}
+.kh-prime-table th,.kh-prime-table td{padding:8px;border-bottom:1px solid #e2e8f0}
+.kh-prime-table th{background:#eff6ff;color:#075985}
+.kh-prime-conclusion,.kh-prime-note,.kh-advanced-explain{margin-top:12px;padding:12px;border-radius:11px;background:#f0f9ff;border:1px solid #bae6fd;line-height:1.9;font-size:13px}
+.kh-prime-note{background:#fffbeb;border-color:#fde68a;color:#78350f}
+.kh-advanced-head{padding:15px;border-radius:13px;background:linear-gradient(120deg,#102a43,#155e75);color:white}
+.kh-advanced-head h3{margin:0 0 5px;font-size:20px;font-weight:900;color:white}
+.kh-advanced-head p{margin:0;color:#dbeafe;line-height:1.8}
+.kh-advanced-controls{margin:12px 0}
+.kh-advanced-controls input[type=range]{min-width:180px;accent-color:#0e7490}
+.kh-advanced-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.kh-advanced-lab .kh-app-note{font-size:12px;color:#64748b}
+.kh-advanced-lab canvas{touch-action:pan-y}
+@media(max-width:760px){.kh-prime-theory{grid-template-columns:1fr}.kh-prime-stats,.kh-advanced-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.kh-prime-chart-wrap canvas,.kh-advanced-visual canvas{height:230px}}
+</style>
+
+
+<script id="kh-prime-and-advanced-labs-script">
+(function(){
+ const $=id=>document.getElementById(id);
+ const primeToggle=$('kh-lab-six-toggle'), primePanel=$('kh-lab-six-content');
+ function primeOpen(show){primePanel.hidden=!show;primeToggle.setAttribute('aria-expanded',String(show));if(show)primePanel.scrollIntoView({behavior:'smooth',block:'start'});}
+ primeToggle?.addEventListener('click',()=>primeOpen(primePanel.hidden));
+ $('kh-lab-six-hide')?.addEventListener('click',()=>primeOpen(false));
+ function sieve(limit){
+  const flags=new Uint8Array(limit+1);flags.fill(1);flags[0]=0;if(limit>=1)flags[1]=0;
+  for(let p=2;p*p<=limit;p++)if(flags[p])for(let k=p*p;k<=limit;k+=p)flags[k]=0;
+  const out=[];for(let i=2;i<=limit;i++)if(flags[i])out.push(i);return out;
+ }
+ const fmt=n=>Number(n).toLocaleString('en-US');
+ function drawPrime(primes){
+  const c=$('kh-prime-chart'),ctx=c.getContext('2d'),w=c.width,h=c.height;
+  ctx.clearRect(0,0,w,h);ctx.fillStyle='#f8fafc';ctx.fillRect(0,0,w,h);
+  const gaps=primes.slice(1).map((p,i)=>({x:p,y:p-primes[i]}));
+  if(!gaps.length)return;
+  const maxX=gaps[gaps.length-1].x,maxY=Math.max(2,...gaps.map(g=>g.y));
+  const L=52,R=18,T=18,B=38,pw=w-L-R,ph=h-T-B;
+  ctx.strokeStyle='#dbeafe';ctx.lineWidth=1;
+  for(let j=0;j<=4;j++){let y=T+ph*j/4;ctx.beginPath();ctx.moveTo(L,y);ctx.lineTo(w-R,y);ctx.stroke();}
+  ctx.fillStyle='#64748b';ctx.font='13px Arial';ctx.textAlign='center';
+  ctx.fillText('العدد الأولي التالي',L+pw/2,h-8);
+  ctx.textAlign='right';ctx.fillText('الفجوة',L-8,T+10);
+  ctx.strokeStyle='#0e7490';ctx.lineWidth=2;ctx.beginPath();
+  gaps.forEach((g,i)=>{let x=L+g.x/maxX*pw,y=T+ph-(g.y/maxY*ph);if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);});
+  ctx.stroke();
+  gaps.forEach(g=>{let x=L+g.x/maxX*pw,y=T+ph-(g.y/maxY*ph);ctx.fillStyle=g.y===2?'#e11d48':'#0e7490';ctx.beginPath();ctx.arc(x,y,3.5,0,Math.PI*2);ctx.fill();});
+ }
+ function runPrime(){
+  const lim=Math.max(50,Math.min(200000,Math.floor(+$('kh-prime-limit').value||1000)));
+  $('kh-prime-limit').value=lim;
+  const ps=sieve(lim),gaps=ps.slice(1).map((p,i)=>({a:ps[i],b:p,g:p-ps[i]}));
+  const twins=gaps.filter(x=>x.g===2),maxGap=gaps.reduce((m,x)=>Math.max(m,x.g),0),avg=gaps.length?gaps.reduce((a,x)=>a+x.g,0)/gaps.length:0;
+  $('kh-prime-stats').innerHTML=[
+   ['عدد الأعداد الأولية',fmt(ps.length)],['أكبر فجوة في النطاق',fmt(maxGap)],['أزواج توأمية ضمن النطاق',fmt(twins.length)],['متوسط الفجوة المرصود',avg.toFixed(2)]
+  ].map(x=>`<div class="kh-prime-stat"><small>${x[0]}</small><strong>${x[1]}</strong></div>`).join('');
+  const count=+$('kh-prime-count').value||20,shown=gaps.slice(0,count);
+  $('kh-prime-rows').innerHTML=shown.map(x=>`<tr><td>${x.a}</td><td>${x.b}</td><td><b>${x.g}</b></td><td>${x.g===2?'نعم':'—'}</td></tr>`).join('')||'<tr><td colspan="4">لا توجد فجوات ضمن النطاق.</td></tr>';
+  drawPrime(ps);
+  $('kh-prime-conclusion').innerHTML=`<b>قراءة النطاق حتى ${fmt(lim)}:</b> ظهرت ${fmt(ps.length)} أعداد أولية و${fmt(twins.length)} أزواج توأمية. أكبر فجوة مرصودة هي ${maxGap}، ومتوسط الفجوات ${avg.toFixed(2)}. هذه نتائج لهذا النطاق المحدود فقط، ولا تثبت نمطاً عاماً أو حدسية مفتوحة.`;
+  $('kh-prime-chart-note').textContent=`رُسمت ${fmt(gaps.length)} فجوة؛ النقاط الحمراء تمثل فجوات مقدارها 2 (أزواج أولية توأمية).`;
+ }
+ $('kh-prime-run')?.addEventListener('click',runPrime);
+ $('kh-prime-reset')?.addEventListener('click',()=>{$('kh-prime-limit').value=1000;$('kh-prime-count').value='20';runPrime();});
+ $('kh-prime-count')?.addEventListener('change',runPrime);
+ runPrime();
+
+ const labs=[{"id": 7, "icon": "⌬", "name": "مختبر الثقوب السوداء", "en": "Black Hole Simulator", "desc": "محاكاة انحناء مسارات الضوء حول كتلة مدمجة؛ نموذج توضيحي لا يحل معادلات النسبية العامة كاملة.", "a": "كتلة الثقب", "b": "قوة العدسة", "c": "مسافة الراصد", "m1": "نصف قطر شوارزشيلد النسبي", "m2": "انحناء مسار الضوء النسبي"}, {"id": 8, "icon": "🪐", "name": "مختبر النظام الشمسي", "en": "Solar System Lab", "desc": "مدارات كبلرية ثنائية الأبعاد مع تغيير الكتلة الابتدائية والسرعة؛ ليست تقويماً فلكياً آنياً.", "a": "كتلة النجم", "b": "سرعة المدار", "c": "نصف قطر المدار", "m1": "السرعة المدارية النسبية", "m2": "زمن الدورة النسبي"}, {"id": 9, "icon": "⚛️", "name": "مختبر ميكانيكا الكم", "en": "Quantum Lab", "desc": "موجة احتمالية لجسيم في بئر أحادي البعد مع تغيير رقم الحالة وعرض البئر.", "a": "رقم الحالة", "b": "عرض البئر", "c": "الزمن", "m1": "طاقة الحالة النسبية", "m2": "احتمال الوجود عند المركز"}, {"id": 10, "icon": "🧲", "name": "مختبر الكهرباء والمغناطيسية", "en": "Electromagnetism Lab", "desc": "حقل كهربائي لشحنة نقطية مع إظهار اتجاه المجال وشدته وفق قانون كولوم.", "a": "الشحنة", "b": "المسافة", "c": "زاوية المجال", "m1": "شدة المجال النسبية", "m2": "جهد كهربائي نسبي"}, {"id": 11, "icon": "✺", "name": "مختبر الفراكتال", "en": "Fractal Explorer", "desc": "استكشاف مجموعة ماندلبروت عبر تغيير التكبير وعدد التكرارات ونقطة الاستكشاف.", "a": "التكبير", "b": "عدد التكرارات", "c": "إزاحة أفقية", "m1": "دقة التكرار", "m2": "مؤشر التعقيد"}, {"id": 12, "icon": "🧬", "name": "مختبر الحياة الاصطناعية", "en": "Artificial Life Lab", "desc": "شبكة خلايا تفاعلية وفق قواعد لعبة الحياة؛ جرّب كثافة البداية وسرعة التطور.", "a": "كثافة البداية", "b": "سرعة التطور", "c": "حجم الشبكة", "m1": "عدد الخلايا الحية", "m2": "عدد الأجيال"}, {"id": 13, "icon": "∿", "name": "مختبر نظرية الفوضى", "en": "Chaos Theory Lab", "desc": "خريطة لوجستية تبيّن الانتقال من السلوك الدوري إلى الفوضى مع تغيير معامل النمو.", "a": "معامل النمو", "b": "القيمة الابتدائية", "c": "عدد التكرارات", "m1": "القيمة النهائية", "m2": "عدد القيم المتميزة تقريباً"}, {"id": 14, "icon": "📐", "name": "مختبر الهندسة الرياضية ثلاثية الأبعاد", "en": "3D Math Lab", "desc": "إسقاط مجسم ثلاثي الأبعاد دوّار مع التحكم بالزاوية والمقياس والمنظور.", "a": "زاوية الدوران", "b": "المقياس", "c": "عمق المنظور", "m1": "عدد الرؤوس", "m2": "عدد الأضلاع"}, {"id": 15, "icon": "🧠", "name": "مختبر الشبكات العصبية", "en": "Neural Network Lab", "desc": "تدريب شبكة عصبية صغيرة من طبقة واحدة على بيانات XOR بصورة تعليمية ومشاهدة انخفاض الخطأ.", "a": "معدل التعلم", "b": "عدد دورات التدريب", "c": "ضوضاء البيانات", "m1": "خطأ التدريب", "m2": "دقة التصنيف"}, {"id": 16, "icon": "🤖", "name": "مختبر الروبوتات", "en": "Robotics Simulator", "desc": "ذراع روبوتية ثنائية الوصلات وحل حركيات عكسية للوصول إلى نقطة مستهدفة.", "a": "طول الوصلة الأولى", "b": "طول الوصلة الثانية", "c": "موضع الهدف", "m1": "خطأ الوصول", "m2": "زاوية المفصل الأول"}, {"id": 17, "icon": "🛡️", "name": "مختبر الأمن السيبراني", "en": "Cybersecurity Lab", "desc": "تقييم تعليمي لقوة كلمة مرور افتراضية وفق طولها وتنوع محارفها؛ لا يجري تخمين كلمات مرور حقيقية.", "a": "طول كلمة المرور", "b": "تنوع المحارف", "c": "معدل المحاولات الافتراضي", "m1": "فضاء الاحتمالات", "m2": "زمن تخمين تقديري"}, {"id": 18, "icon": "⚛️", "name": "مختبر الحوسبة الكمّية", "en": "Quantum Computing Lab", "desc": "بوابة هادامارد وقياس كيوبت: شاهد كيف يتغير احتمال القياس مع طور الحالة.", "a": "زاوية الدوران", "b": "الطور", "c": "عدد التجارب", "m1": "احتمال قياس 0", "m2": "احتمال قياس 1"}, {"id": 19, "icon": "🌍", "name": "مختبر الزلازل", "en": "Earthquake Simulator", "desc": "نموذج انتشار موجة زلزالية مبسط يوضح أثر المسافة والتوهين؛ لا يتنبأ بالزلازل أو الأضرار.", "a": "سعة المصدر", "b": "التوهين", "c": "المسافة", "m1": "السعة عند الراصد", "m2": "زمن الوصول النسبي"}, {"id": 20, "icon": "🌦️", "name": "مختبر المناخ", "en": "Climate Simulator", "desc": "نموذج ميزانية طاقة مبسط يوازن الإشعاع الداخل والخارج مع معامل الانعكاس والاحتباس.", "a": "الإشعاع الشمسي", "b": "معامل الانعكاس", "c": "معامل الاحتباس", "m1": "درجة الاتزان النموذجية", "m2": "التغير عن خط الأساس"}, {"id": 21, "icon": "🌊", "name": "مختبر المحيطات", "en": "Ocean Dynamics Lab", "desc": "موجة سطحية تتغير مع العمق والتردد والرياح ضمن نموذج موجي تعليمي.", "a": "سرعة الرياح", "b": "التردد", "c": "العمق", "m1": "ارتفاع الموجة النسبي", "m2": "طول الموجة"}, {"id": 22, "icon": "🔥", "name": "مختبر انتشار الحرائق", "en": "Fire Dynamics Lab", "desc": "شبكة خلوية لاحتمال انتقال النار بين الخلايا بحسب الرياح والرطوبة؛ ليست أداة توقع أو توجيه ميداني.", "a": "قوة الرياح", "b": "الرطوبة", "c": "كثافة الوقود", "m1": "الخلايا المتأثرة", "m2": "نسبة الانتشار"}, {"id": 23, "icon": "🧪", "name": "مختبر الكيمياء الجزيئية", "en": "Molecular Chemistry Lab", "desc": "تصور مبسط لحركة جزيئات وتصادماتها في صندوق ثنائي الأبعاد مع ضبط الحرارة وعدد الجزيئات.", "a": "درجة الحرارة", "b": "عدد الجزيئات", "c": "حجم الوعاء", "m1": "متوسط الطاقة الحركية", "m2": "معدل التصادم النسبي"}, {"id": 24, "icon": "🧬", "name": "مختبر الحمض النووي", "en": "DNA Laboratory", "desc": "محاكاة تعليمية لنسخ DNA إلى RNA وترجمة كودونات مختارة إلى أحماض أمينية.", "a": "طول التسلسل", "b": "معدل الطفرات", "c": "موضع البداية", "m1": "طول RNA الناتج", "m2": "عدد الكودونات"}, {"id": 25, "icon": "🔬", "name": "مختبر الأحياء الدقيقة", "en": "Microbiology Lab", "desc": "نمو لوجستي افتراضي لمجتمع ميكروبي تحت تأثير الموارد ومعدل النمو؛ ليس نموذجاً طبياً.", "a": "معدل النمو", "b": "سعة البيئة", "c": "الزمن", "m1": "حجم المجتمع", "m2": "نسبة السعة المستهلكة"}, {"id": 26, "icon": "🔊", "name": "مختبر الصوتيات", "en": "Acoustics Lab", "desc": "موجة صوتية تفاعلية تجمع التردد والسعة والطور مع عرض شكل الموجة والطيف الأساسي.", "a": "التردد", "b": "السعة", "c": "الطور", "m1": "الطول الموجي", "m2": "القيمة الفعالة RMS"}, {"id": 27, "icon": "🔭", "name": "مختبر البصريات", "en": "Optics Lab", "desc": "تتبّع شعاع ضوئي عبر سطح فاصل باستخدام قانون سنيل للانكسار.", "a": "زاوية السقوط", "b": "معامل الانكسار", "c": "طول الموجة", "m1": "زاوية الانكسار", "m2": "الانعكاس الداخلي الكلي"}, {"id": 28, "icon": "✈️", "name": "مختبر الديناميكا الهوائية", "en": "Aerodynamics Lab", "desc": "حساب تقريبي لقوة الرفع والسحب من معادلات الجريان غير القابل للانضغاط.", "a": "سرعة الهواء", "b": "مساحة الجناح", "c": "معامل الرفع", "m1": "قوة الرفع", "m2": "قوة السحب"}, {"id": 29, "icon": "☀️", "name": "مختبر الطاقة المتجددة", "en": "Renewable Energy Lab", "desc": "تقدير خرج منظومة ألواح شمسية وفق الإشعاع والمساحة والكفاءة ودرجة الحرارة.", "a": "الإشعاع", "b": "مساحة الألواح", "c": "الكفاءة", "m1": "القدرة الكهربائية", "m2": "الطاقة خلال ساعة"}, {"id": 30, "icon": "🧊", "name": "مختبر الطباعة ثلاثية الأبعاد", "en": "3D Printing Lab", "desc": "حساب زمن طباعة تقديري من ارتفاع الطبقة والسرعة والحجم ونسبة الملء؛ تقدير تعليمي لا يحل محل برنامج التقطيع.", "a": "ارتفاع الطبقة", "b": "سرعة الطباعة", "c": "نسبة الملء", "m1": "عدد الطبقات", "m2": "الزمن التقديري"}];
+ const host=document.createElement('div');host.id='kh-research-advanced-labs';host.innerHTML=`<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="7" aria-expanded="false"> ⌬ 07 · المختبر رقم 07</button><span>مختبر الثقوب السوداء — Black Hole Simulator</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="8" aria-expanded="false"> 🪐 08 · المختبر رقم 08</button><span>مختبر النظام الشمسي — Solar System Lab</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="9" aria-expanded="false"> ⚛️ 09 · المختبر رقم 09</button><span>مختبر ميكانيكا الكم — Quantum Lab</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="10" aria-expanded="false"> 🧲 10 · المختبر رقم 10</button><span>مختبر الكهرباء والمغناطيسية — Electromagnetism Lab</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="11" aria-expanded="false"> ✺ 11 · المختبر رقم 11</button><span>مختبر الفراكتال — Fractal Explorer</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="12" aria-expanded="false"> 🧫 12 · المختبر رقم 12</button><span>مختبر الحياة الاصطناعية — Artificial Life Lab</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="13" aria-expanded="false"> ∿ 13 · المختبر رقم 13</button><span>مختبر نظرية الفوضى — Chaos Theory Lab</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="14" aria-expanded="false"> 📐 14 · المختبر رقم 14</button><span>مختبر الهندسة الرياضية ثلاثية الأبعاد — 3D Math Lab</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="15" aria-expanded="false"> 🧠 15 · المختبر رقم 15</button><span>مختبر الشبكات العصبية — Neural Network Lab</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="16" aria-expanded="false"> 🤖 16 · المختبر رقم 16</button><span>مختبر الروبوتات — Robotics Simulator</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="17" aria-expanded="false"> 🛡️ 17 · المختبر رقم 17</button><span>مختبر الأمن السيبراني — Cybersecurity Lab</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="18" aria-expanded="false"> 🌀 18 · المختبر رقم 18</button><span>مختبر الحوسبة الكمّية — Quantum Computing Lab</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="19" aria-expanded="false"> 🌍 19 · المختبر رقم 19</button><span>مختبر الزلازل — Earthquake Simulator</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="20" aria-expanded="false"> 🌦️ 20 · المختبر رقم 20</button><span>مختبر المناخ — Climate Simulator</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="21" aria-expanded="false"> 🌊 21 · المختبر رقم 21</button><span>مختبر المحيطات — Ocean Dynamics Lab</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="22" aria-expanded="false"> 🔥 22 · المختبر رقم 22</button><span>مختبر انتشار الحرائق — Fire Dynamics Lab</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="23" aria-expanded="false"> 🧪 23 · المختبر رقم 23</button><span>مختبر الكيمياء الجزيئية — Molecular Chemistry Lab</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="24" aria-expanded="false"> 🧬 24 · المختبر رقم 24</button><span>مختبر الحمض النووي — DNA Laboratory</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="25" aria-expanded="false"> 🔬 25 · المختبر رقم 25</button><span>مختبر الأحياء الدقيقة — Microbiology Lab</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="26" aria-expanded="false"> 🔊 26 · المختبر رقم 26</button><span>مختبر الصوتيات — Acoustics Lab</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="27" aria-expanded="false"> 🔭 27 · المختبر رقم 27</button><span>مختبر البصريات — Optics Lab</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="28" aria-expanded="false"> ✈️ 28 · المختبر رقم 28</button><span>مختبر الديناميكا الهوائية — Aerodynamics Lab</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="29" aria-expanded="false"> ☀️ 29 · المختبر رقم 29</button><span>مختبر الطاقة المتجددة — Renewable Energy Lab</span></div>
+<div class="kh-lab-launch is-lab-launch"><button class="kh-btn primary" type="button" data-advanced-lab="30" aria-expanded="false"> 🧊 30 · المختبر رقم 30</button><span>مختبر الطباعة ثلاثية الأبعاد — 3D Printing Lab</span></div>`; 
+ const research=document.querySelector('[data-kh-panel="research-lab"]');
+ if(research)research.appendChild(host);
+ const panels=new Map();
+ const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+ const specs={
+  7:{f:(x,a,b,c)=>Math.exp(-Math.abs(x-.5)*b)*a/(c+1),metric:(a,b,c)=>[`${(2*a).toFixed(2)} وحدات`,'كلما اقترب الشعاع من الكتلة زاد الانحراف في هذا النموذج']},
+  8:{f:(x,a,b,c)=>Math.sin(x*6.283)*a/(1+c*.2),metric:(a,b,c)=>[(b/Math.sqrt(a/c)).toFixed(2),'المدار الدائري التقريبي يتطلب سرعة متناسبة مع √(GM/r)']},
+  9:{f:(x,a,b,c)=>Math.pow(Math.sin((a+1)*Math.PI*x),2)*Math.exp(-Math.abs(x-.5)*c*.15),metric:(a,b,c)=>[`${(a+1)**2/c**2}`,'الطاقة ترتفع مع مربع رقم الحالة وتقل مع مربع عرض البئر']},
+  10:{f:(x,a,b,c)=>a/(Math.pow(.12+x*c,2)+.05),metric:(a,b,c)=>[(a/(c*c)).toFixed(3),'المجال يتناقص مع مربع المسافة في الشحنة النقطية']},
+  11:{f:(x,a,b,c)=>Math.sin(x*a*8)*Math.cos(x*b*3),metric:(a,b,c)=>[`${Math.round(b*20)} تكراراً`,'زيادة عدد التكرارات تكشف تفاصيل أكثر في حدود مجموعة ماندلبروت']},
+  12:{f:(x,a,b,c)=>Math.max(0,Math.sin(x*a*9)+Math.cos(x*b*5))*c/2,metric:(a,b,c)=>[`${Math.round(c*c*100)} خلية أولية`,'تتغير أعداد الخلايا وفق قواعد الجوار والتزامن']},
+  13:{f:(x,a,b,c)=>{let y=clamp(b/10,.01,.99);for(let i=0;i<Math.floor(x*c*20);i++)y=a*y*(1-y);return y;},metric:(a,b,c)=>[a.toFixed(3),'تظهر الحساسية للشروط الابتدائية قرب مناطق السلوك الفوضوي']},
+  14:{f:(x,a,b,c)=>Math.sin(x*6.28+a)*Math.cos(x*3.14*b)*c,metric:(a,b,c)=>['8 رؤوس / 12 ضلعاً','المجسم المعروض مكعب؛ الإسقاط يتغير بالزاوية والمنظور']},
+  15:{f:(x,a,b,c)=>1/(1+Math.exp(-a*(x-.5)*b)),metric:(a,b,c)=>[`${Math.max(1,Math.round(b*10))} دورات`,'شبكة تعليمية مبسطة؛ لا تمثل نموذجاً مدرباً على بيانات خارجية']},
+  16:{f:(x,a,b,c)=>Math.sin(x*6.28+a)*b+c,metric:(a,b,c)=>[`${Math.abs(a-b).toFixed(2)} وحدات`,'الوصول ممكن فقط إذا كان الهدف ضمن مدى مجموع طولي الوصلتين']},
+  17:{f:(x,a,b,c)=>Math.log2(Math.max(2,a))*b*(1+x*c),metric:(a,b,c)=>[`${Math.round(a*b)} بت تقريبية`,'مقياس تقريبي للإنتروبيا؛ لا يضمن أمان كلمة مرور فعلية']},
+  18:{f:(x,a,b,c)=>Math.pow(Math.cos((x*a+b)*Math.PI/2),2),metric:(a,b,c)=>[`${(Math.cos(b*Math.PI/2)**2*100).toFixed(1)}%`,'احتمالا القياس يجمعان إلى 1 في الحالة المثالية']},
+  19:{f:(x,a,b,c)=>a*Math.exp(-b*x*4)/(1+c*x),metric:(a,b,c)=>[`${(a*Math.exp(-b*c)).toFixed(3)}`,'توهين السعة مع المسافة في نموذج موجي مبسط']},
+  20:{f:(x,a,b,c)=>a*(1-b)*Math.pow(1+x*.2,4)-c*40,metric:(a,b,c)=>[`${(15+Math.log(1+a*(1-b)/Math.max(1,c))).toFixed(2)}°`,'ميزانية الطاقة مبسطة ولا تمثل توقعاً مناخياً']},
+  21:{f:(x,a,b,c)=>Math.sin(x*6.28*b)*Math.exp(-x*c/8)*a,metric:(a,b,c)=>[`${(a*1.56).toFixed(2)} م`,'الموجة تمثيل تعليمي لسطح البحر']},
+  22:{f:(x,a,b,c)=>clamp((a/10)*(1-b/100)*c*(.4+.6*Math.sin(x*8)**2),0,1),metric:(a,b,c)=>[`${(a*(1-b/100)*c*10).toFixed(1)}%`,'انتقال النار في الواقع يتطلب بيانات ميدانية ونماذج متخصصة']},
+  23:{f:(x,a,b,c)=>Math.sin(x*a*12)*Math.cos(x*b*7)*c,metric:(a,b,c)=>[`${(a*1.5).toFixed(2)} وحدة`,'الحركة المعروضة تقريب تصوري لا ديناميكا جزيئية كمية']},
+  24:{f:(x,a,b,c)=>Math.sin(x*a*6.28)*(1-b/100)+Math.cos(x*c*3)*.2,metric:(a,b,c)=>[`${Math.floor(a/3)} كودون`,'التسلسل الاصطناعي يوضح فكرة القراءة الثلاثية فقط']},
+  25:{f:(x,a,b,c)=>{let k=Math.max(1,b),n=1;return k/(1+(k-1)*Math.exp(-a*x*c));},metric:(a,b,c)=>[`${Math.round(b/(1+Math.exp(-a*c)))}`,'النمو اللوجستي يقترب من سعة البيئة']},
+  26:{f:(x,a,b,c)=>a*Math.sin(2*Math.PI*b*x+c),metric:(a,b,c)=>[`${(343/b).toFixed(2)} م`,'سرعة الصوت التقريبية في الهواء 343 م/ث عند ظروف معتدلة']},
+  27:{f:(x,a,b,c)=>Math.sin(x*6.28+a)*Math.cos(b*x*2),metric:(a,b,c)=>{let t=Math.asin(clamp(Math.sin(a*Math.PI/180)/b,-1,1))*180/Math.PI;return [`${t.toFixed(2)}°`,'قانون سنيل: n₁ sinθ₁ = n₂ sinθ₂'];}},
+  28:{f:(x,a,b,c)=>.5*1.225*a*a*b*c*(.3+.7*x),metric:(a,b,c)=>[`${(.5*1.225*a*a*b*c).toFixed(1)} نيوتن`,'قوة الرفع تتناسب مع مربع السرعة وكثافة الهواء ومساحة الجناح ومعامل الرفع']},
+  29:{f:(x,a,b,c)=>a*b*c*(.5+.5*Math.sin(x*Math.PI)),metric:(a,b,c)=>[`${(a*b*c).toFixed(1)} واط`,'القدرة التقريبية = الإشعاع × المساحة × الكفاءة']},
+  30:{f:(x,a,b,c)=>Math.ceil(c*1000/a)*x/(b/30+0.1),metric:(a,b,c)=>[`${Math.ceil(c*1000/a)} طبقة`,'الزمن تقديري ويتأثر بالدعامات والتسارع ومسارات الرأس وإعدادات المادة']}
+ };
+ const defaults={
+  7:[5,3,2],8:[5,1,3],9:[2,2,1],10:[5,2,1],11:[2,6,1],12:[4,4,5],13:[3.7,5,8],14:[1,2,3],15:[1,5,1],16:[2,2,1],17:[14,4,2],18:[1,0,100],19:[8,2,2],20:[340,30,2],21:[5,2,3],22:[6,35,5],23:[3,40,2],24:[30,2,3],25:[.8,100,5],26:[440,1,.5],27:[35,1.5,1],28:[30,16,.8],29:[800,10,.2],30:[.2,50,20]
+ };
+ function drawModel(canvas,id,vals){
+  const ctx=canvas.getContext('2d'),w=canvas.width,h=canvas.height;ctx.clearRect(0,0,w,h);ctx.fillStyle='#f8fafc';ctx.fillRect(0,0,w,h);
+  ctx.strokeStyle='#e2e8f0';ctx.lineWidth=1;for(let j=1;j<5;j++){ctx.beginPath();ctx.moveTo(30,h*j/5);ctx.lineTo(w-15,h*j/5);ctx.stroke();}
+  const f=specs[id].f,ys=Array.from({length:181},(_,i)=>f(i/180,...vals));let lo=Math.min(...ys),hi=Math.max(...ys);if(!isFinite(lo)||!isFinite(hi)){lo=-1;hi=1;}if(hi-lo<.001){hi=lo+1;}
+  ctx.strokeStyle='#0e7490';ctx.lineWidth=3;ctx.beginPath();ys.forEach((v,i)=>{let x=30+(w-45)*i/180,y=h-20-(v-lo)/(hi-lo)*(h-40);if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);});ctx.stroke();
+  ctx.fillStyle='#475569';ctx.font='12px Arial';ctx.textAlign='left';ctx.fillText('تمثيل النموذج — المحور الأفقي متغير استكشافي',34,17);
+ }
+ function panelMarkup(l){
+  let d=defaults[l.id],p=document.createElement('div');p.className='kh-advanced-lab';p.id='kh-advanced-panel-'+l.id;p.hidden=true;
+  p.innerHTML=`<div class="kh-lab-toolbar"><strong>المختبر ${l.id} · ${l.name}</strong><button class="kh-btn" type="button" data-advanced-hide="${l.id}">إخفاء المختبر ${l.id} ✕</button></div><div class="kh-advanced-head"><h3>${l.icon} ${l.name}</h3><p>${l.desc}</p><small>${l.en}</small></div><div class="kh-advanced-controls"><label>${l.a}<input type="range" min="${l.id===13?1:1}" max="${l.id===13?4:100}" step="${l.id===13?.01:1}" value="${d[0]}" data-param="0"><output>${d[0]}</output></label><label>${l.b}<input type="range" min="0" max="100" step="1" value="${d[1]}" data-param="1"><output>${d[1]}</output></label><label>${l.c}<input type="range" min="0.1" max="10" step="0.1" value="${d[2]}" data-param="2"><output>${d[2]}</output></label><button class="kh-btn primary" type="button" data-advanced-run="${l.id}">تشغيل المحاكاة</button><button class="kh-btn" type="button" data-advanced-reset="${l.id}">إعادة القيم</button></div><div class="kh-advanced-stats"><div class="kh-advanced-stat"><small>${l.m1}</small><strong data-metric="0">—</strong></div><div class="kh-advanced-stat"><small>${l.m2}</small><strong data-metric="1">—</strong></div><div class="kh-advanced-stat"><small>المعاملات</small><strong data-metric="2">—</strong></div><div class="kh-advanced-stat"><small>حالة المحاكاة</small><strong data-metric="3">جاهزة</strong></div></div><div class="kh-advanced-visual"><h4>المخرجات المرئية للنموذج</h4><canvas width="1000" height="300" aria-label="رسم المحاكاة"></canvas></div><div class="kh-advanced-explain">${l.desc}<br><b>تنبيه منهجي:</b> هذه محاكاة تعليمية مبسطة بمعاملات افتراضية، وليست بديلاً عن المحاكاة الهندسية أو الفيزيائية المتخصصة أو البيانات المقاسة.</div>`;
+  return p;
+ }
+ function runLab(l,p){
+  let vals=[...p.querySelectorAll('[data-param]')].map(x=>+x.value),m=specs[l.id].metric(...vals);
+  drawModel(p.querySelector('canvas'),l.id,vals);
+  p.querySelector('[data-metric="0"]').textContent=m[0];p.querySelector('[data-metric="1"]').textContent=m[1];
+  p.querySelector('[data-metric="2"]').textContent=vals.map(x=>Number(x.toFixed(2))).join(' · ');p.querySelector('[data-metric="3"]').textContent='تم التشغيل';
+ }
+ labs.forEach(l=>{let p=panelMarkup(l);host.appendChild(p);panels.set(l.id,p);});
+ host.addEventListener('click',e=>{
+  const btn=e.target.closest('[data-advanced-lab]');if(btn){let id=+btn.dataset.advancedLab,p=panels.get(id),show=p.hidden;
+   panels.forEach((x,k)=>{x.hidden=true;host.querySelector(`[data-advanced-lab="${k}"]`)?.setAttribute('aria-expanded','false');});
+   p.hidden=!show;btn.setAttribute('aria-expanded',String(show));if(show){runLab(labs.find(x=>x.id===id),p);p.scrollIntoView({behavior:'smooth',block:'start'});}return;}
+  const hide=e.target.closest('[data-advanced-hide]');if(hide){let id=+hide.dataset.advancedHide;panels.get(id).hidden=true;host.querySelector(`[data-advanced-lab="${id}"]`)?.setAttribute('aria-expanded','false');return;}
+  const run=e.target.closest('[data-advanced-run]');if(run){let id=+run.dataset.advancedRun;runLab(labs.find(x=>x.id===id),panels.get(id));return;}
+  const reset=e.target.closest('[data-advanced-reset]');if(reset){let id=+reset.dataset.advancedReset,l=labs.find(x=>x.id===id),p=panels.get(id);p.querySelectorAll('[data-param]').forEach((x,i)=>{x.value=defaults[id][i];x.nextElementSibling.textContent=x.value;});runLab(l,p);}
+ });
+ host.addEventListener('input',e=>{if(e.target.matches('[data-param]'))e.target.nextElementSibling.textContent=e.target.value;});
+})();
+</script>
+
 </section>
 
 <style id="quantum-encyclopedia-styles">
@@ -13354,6 +13587,23 @@ window.addEventListener('load',start,{once:true});
 @media(max-width:680px){#bunat-kh-hub .kh-pixel-canvases{grid-template-columns:1fr}}
 </style>
 
+
+<style id="bunat-radio-arabic-style">
+#bunat-kh-hub #kh-radio-arabic{background:linear-gradient(145deg,#f8fbff,#eef4fb);border:1px solid #c5a34a;box-shadow:0 12px 35px rgba(10,35,70,.12)}
+#bunat-kh-hub #kh-radio-arabic .ra-head{text-align:center;padding:12px;border-radius:16px;background:linear-gradient(120deg,#0c2340,#173b61);color:#fff;margin-bottom:16px}
+#bunat-kh-hub #kh-radio-arabic .ra-head h3,#bunat-kh-hub #kh-radio-arabic .ra-head p{color:#fff!important}
+#bunat-kh-hub #kh-radio-arabic .ra-spark{color:#f3d47b;letter-spacing:8px;font-size:22px}
+#bunat-kh-hub #kh-radio-arabic .ra-inputrow{display:flex;gap:8px;flex-wrap:wrap;align-items:stretch}
+#bunat-kh-hub #kh-radio-arabic input{flex:1 1 240px;min-width:0;padding:13px;border:1px solid #c5a34a;border-radius:12px;background:#fff;color:#102b4a;font-size:18px}
+#bunat-kh-hub #kh-radio-arabic .kh-btn{background:#123454;color:#fff;border:1px solid #c5a34a;border-radius:12px;padding:10px 16px;font-weight:900;cursor:pointer}
+#bunat-kh-hub #kh-radio-arabic .ra-result{margin-top:14px;padding:18px;border-radius:16px;background:#fff;border:1px solid #d8bd70;text-align:center}
+#bunat-kh-hub #kh-radio-arabic .ra-result span{display:block;color:#64748b;font-size:12px;font-weight:800}
+#bunat-kh-hub #kh-radio-arabic .ra-result strong{display:block;color:#102e50;font-size:30px;margin:8px 0 14px}
+#bunat-kh-hub #kh-radio-arabic .ra-actions{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+#bunat-kh-hub #kh-radio-arabic .ra-note{font-size:11px;color:#64748b;margin-top:14px;line-height:1.8}
+@media(max-width:600px){#bunat-kh-hub #kh-radio-arabic .ra-inputrow{display:grid;grid-template-columns:1fr 1fr}#bunat-kh-hub #kh-radio-arabic input{grid-column:1/-1}}
+</style>
+
 <script id="bunat-kh-engine">
 (function(){
  'use strict';
@@ -14558,6 +14808,114 @@ open:['مسائل لا تزال مفتوحة للبحث',`
   next.addEventListener('click',()=>{if(step<5){step++;render();}});
   reset.addEventListener('click',()=>{step=0;render();});
   render();
+})();
+</script>
+<script id="bunat-radio-arabic-engine">
+(function(){
+ 'use strict';
+ function initRadio(){
+  const hub=document.getElementById('bunat-kh-hub');
+  const input=document.getElementById('ra-persian');
+  const translate=document.getElementById('ra-translate');
+  const mic=document.getElementById('ra-mic');
+  const status=document.getElementById('ra-status');
+  const result=document.getElementById('ra-result');
+  const arabic=document.getElementById('ra-arabic');
+  const speak=document.getElementById('ra-speak');
+  const copy=document.getElementById('ra-copy');
+  if(!hub||!input||!translate||!mic||!status||!result||!arabic||hub.dataset.radioArabicReady==='1')return;
+  hub.dataset.radioArabicReady='1';
+  let lastArabic='';
+  let activeAudio=null;
+  function sayArabic(text){
+   text=String(text||'').trim();
+   if(!text){status.textContent='ترجم النص أولاً ثم اضغط زر الاستماع.';return;}
+   // Start playback only from the user's explicit click; browsers block speech started after async translation.
+   try{
+    if(activeAudio){activeAudio.pause();activeAudio=null;}
+    if('speechSynthesis' in window && typeof SpeechSynthesisUtterance!=='undefined'){
+     window.speechSynthesis.cancel();
+     window.speechSynthesis.resume();
+     const utterance=new SpeechSynthesisUtterance(text);
+     utterance.lang='ar-SA'; utterance.rate=0.88; utterance.pitch=1;
+     const voices=window.speechSynthesis.getVoices();
+     const voice=voices.find(v=>/^ar([_-]|$)/i.test(v.lang)) || voices.find(v=>/arabic|عربي/i.test(v.name));
+     if(!voice){playOnlineArabic(text);return;}
+     utterance.voice=voice;
+     utterance.onstart=()=>{status.textContent='🔊 يجري نطق الترجمة بالعربية…';};
+     utterance.onend=()=>{status.textContent='انتهى النطق. اضغط الاستماع لإعادته.';};
+     utterance.onerror=()=>{playOnlineArabic(text);};
+     window.speechSynthesis.speak(utterance);
+     return;
+    }
+   }catch(err){ /* use online audio fallback below */ }
+   playOnlineArabic(text);
+  }
+  function playOnlineArabic(text){
+   try{
+    if(activeAudio){activeAudio.pause();activeAudio=null;}
+    const url='https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=ar&q='+encodeURIComponent(text);
+    activeAudio=new Audio(url);activeAudio.onplay=()=>{status.textContent='🔊 يجري تشغيل النطق العربي عبر الإنترنت…';};
+    activeAudio.onended=()=>{status.textContent='انتهى النطق العربي.';};
+    activeAudio.onerror=()=>{status.textContent='تعذر تشغيل الصوت. تأكد من اتصال الإنترنت ومن وجود صوت عربي في إعدادات النظام، ثم أعد المحاولة.';};
+    const promise=activeAudio.play();
+    if(promise&&typeof promise.catch==='function')promise.catch(()=>{status.textContent='منع المتصفح تشغيل الصوت. اضغط زر الاستماع مرة أخرى، وتأكد من أن صوت الجهاز غير مكتوم.';});
+   }catch(e){status.textContent='تعذر تشغيل الصوت العربي في هذا المتصفح.';}
+  }
+  async function fetchTranslation(q){
+   const google='https://translate.googleapis.com/translate_a/single?client=gtx&sl=fa&tl=ar&dt=t&q='+encodeURIComponent(q);
+   let lastError;
+   try{
+    const r=await fetch(google,{method:'GET'});
+    if(!r.ok)throw new Error('خدمة الترجمة الأولى غير متاحة');
+    const data=await r.json();
+    const translated=Array.isArray(data?.[0])?data[0].map(x=>x&&x[0]||'').join('').trim():'';
+    if(translated)return translated;
+   }catch(e){lastError=e;}
+   try{
+    const url='https://api.mymemory.translated.net/get?q='+encodeURIComponent(q)+'&langpair=fa%7Car';
+    const r=await fetch(url,{method:'GET'});
+    if(!r.ok)throw new Error('خدمة الترجمة الاحتياطية غير متاحة');
+    const data=await r.json();
+    const translated=(data?.responseData?.translatedText||'').trim();
+    if(translated && data?.responseStatus!==403)return translated;
+   }catch(e){lastError=e;}
+   throw lastError||new Error('لم تصل ترجمة من خدمات الترجمة.');
+  }
+  async function doTranslate(){
+   const q=input.value.trim();
+   if(!q){status.textContent='اكتب الكلمة أو العبارة بالفارسية أولاً.';input.focus();return;}
+   translate.disabled=true;status.textContent='جارٍ ترجمة الفارسية إلى العربية…';result.hidden=true;
+   try{
+    const translated=await fetchTranslation(q);
+    lastArabic=translated;arabic.textContent=translated;result.hidden=false;
+    status.textContent='اكتملت الترجمة. اضغط زر «استمع إلى النطق العربي» لسماعها.';
+   }catch(e){status.textContent='لم تنجح الترجمة. تأكد من اتصال الإنترنت، ثم أعد المحاولة. '+(e?.message||'');}
+   finally{translate.disabled=false;}
+  }
+  translate.addEventListener('click',doTranslate);
+  input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();doTranslate();}});
+  speak.addEventListener('click',function(){if(!lastArabic){status.textContent='ترجم النص أولاً، ثم اضغط الاستماع.';return;}sayArabic(lastArabic);});
+  copy.addEventListener('click',async()=>{
+   if(!lastArabic){status.textContent='لا توجد ترجمة لنسخها بعد.';return;}
+   try{await navigator.clipboard.writeText(lastArabic);status.textContent='نُسخت الترجمة العربية.';}
+   catch(e){status.textContent='تعذر النسخ التلقائي؛ حدّد النص العربي وانسخه يدوياً.';}
+  });
+  mic.addEventListener('click',()=>{
+   const Recognition=window.SpeechRecognition||window.webkitSpeechRecognition;
+   if(!Recognition){status.textContent='الإملاء الصوتي بالفارسية غير مدعوم في هذا المتصفح. اكتب الفارسية في الحقل، أو افتح الصفحة عبر HTTPS في Chrome أو Edge.';input.focus();return;}
+   let recognition;
+   try{
+    recognition=new Recognition();recognition.lang='fa-IR';recognition.interimResults=false;recognition.maxAlternatives=1;
+    mic.disabled=true;status.textContent='الميكروفون يعمل الآن؛ تكلّم بالفارسية…';
+    recognition.onresult=e=>{const spoken=e.results?.[0]?.[0]?.transcript||'';if(spoken){input.value=spoken;status.textContent='تم التقاط النص الفارسي. اضغط «ترجم وانطق».';}};
+    recognition.onerror=e=>{status.textContent=e.error==='not-allowed'?'لم يُسمح باستخدام الميكروفون. اسمح للمتصفح بالوصول إليه ثم أعد المحاولة.':'تعذر التقاط الصوت ('+(e.error||'خطأ')+'). يمكنك كتابة الكلمة بالفارسية.';};
+    recognition.onend=()=>{mic.disabled=false;};
+    recognition.start();
+   }catch(e){mic.disabled=false;status.textContent='تعذر تشغيل الميكروفون. تحقق من إذن المتصفح واتصال الصفحة الآمن (HTTPS).';}
+  });
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initRadio,{once:true});else initRadio();
 })();
 </script>
 </body>
@@ -25303,3 +25661,112 @@ open:['مسائل لا تزال مفتوحة للبحث',`
 السطر 10501: إغلاق وسم script ونهاية الشيفرة البرمجية.
 نهاية الشرح العربي التفصيلي.
 -->
+
+<style id="kh-lab-enchanted-launchers">
+/* توحيد أزرار المختبرات وإضفاء هوية سحرية موحّدة */
+[data-kh-panel="research-lab"] .kh-lab-launch{
+  position:relative;display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  margin:13px 0;padding:12px 14px;border:1px solid rgba(148,163,184,.28);
+  border-radius:20px;background:linear-gradient(115deg,rgba(8,24,54,.97),rgba(23,37,84,.94) 55%,rgba(42,31,83,.94));
+  box-shadow:0 8px 24px rgba(15,23,42,.13),inset 0 1px 0 rgba(255,255,255,.08);overflow:hidden;
+}
+[data-kh-panel="research-lab"] .kh-lab-launch:before{
+  content:"✧   ·   ✦      ·      ✧";position:absolute;inset:0 8px auto auto;height:100%;
+  display:flex;align-items:center;justify-content:flex-end;padding-inline:12px;
+  color:rgba(255,255,255,.10);font-size:25px;letter-spacing:18px;pointer-events:none;
+}
+#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>button.kh-btn{
+  position:relative;z-index:1;isolation:isolate;flex:0 0 210px;width:210px;min-width:210px;max-width:210px;
+  height:68px;min-height:68px;max-height:68px;margin:0;padding:8px 13px;
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  border:1px solid rgba(255,226,151,.82)!important;border-radius:17px!important;
+  background:linear-gradient(135deg,#102b55 0%,#244b82 42%,#573b83 76%,#8a642d 100%)!important;
+  color:#fff!important;font-size:15px!important;font-weight:950!important;line-height:1.35;
+  white-space:normal;box-shadow:0 0 0 3px rgba(245,208,112,.10),0 7px 18px rgba(0,0,0,.27),inset 0 1px 0 rgba(255,255,255,.25);
+  text-shadow:0 1px 5px rgba(0,0,0,.45);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,filter .22s ease;
+}
+#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>button.kh-btn:after{
+  content:"✦";position:absolute;top:5px;left:9px;color:#ffe6a3;font-size:12px;opacity:.9;
+}
+#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>button.kh-btn:hover,
+#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>button.kh-btn:focus-visible{
+  transform:translateY(-3px) scale(1.015);border-color:#fff1bd!important;
+  box-shadow:0 0 0 3px rgba(250,221,145,.18),0 0 24px rgba(125,164,255,.42),0 12px 24px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.35);
+  filter:brightness(1.13);outline:2px solid rgba(255,231,164,.7);outline-offset:3px;
+}
+#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>span{
+  position:relative;z-index:1;flex:1 1 230px;min-width:0;color:#e7efff;
+  font-size:14px;font-weight:800;line-height:1.8;text-shadow:0 1px 5px rgba(0,0,0,.28);
+}
+@media(max-width:560px){
+ [data-kh-panel="research-lab"] .kh-lab-launch{gap:9px;padding:10px;border-radius:16px}
+ #bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>button.kh-btn{flex-basis:100%;width:100%;min-width:0;max-width:none;height:62px;min-height:62px;max-height:62px}
+ #bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>span{flex-basis:100%;text-align:center;font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>button.kh-btn{transition:none}}
+</style>
+
+
+<style id="kh-lab-unified-enchanted-final">
+#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch{min-height:94px;}
+#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>button.kh-btn{
+  flex:0 0 230px!important;width:230px!important;min-width:230px!important;max-width:230px!important;
+  height:70px!important;min-height:70px!important;max-height:70px!important;
+  box-sizing:border-box!important;border-radius:18px!important;
+  font-size:15px!important;letter-spacing:.15px;font-variant-numeric:tabular-nums;
+  background:linear-gradient(135deg,#071a38 0%,#173b69 38%,#493477 72%,#8a642d 100%)!important;
+  border:1px solid #f3d68b!important;
+  box-shadow:0 0 0 2px rgba(246,214,139,.13),0 9px 22px rgba(3,12,32,.30),inset 0 1px 0 rgba(255,255,255,.24)!important;
+}
+#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>button.kh-btn:before{
+  content:"✧";position:absolute;right:10px;top:5px;color:#ffe9ac;font-size:12px;opacity:.9;
+}
+#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>button.kh-btn:after{
+  content:"✦";position:absolute;left:10px;bottom:5px;top:auto;color:#ffe9ac;font-size:11px;opacity:.85;
+}
+#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>button.kh-btn:hover,
+#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>button.kh-btn:focus-visible{
+  transform:translateY(-3px);filter:brightness(1.16);
+  box-shadow:0 0 0 3px rgba(255,226,151,.23),0 0 26px rgba(145,177,255,.48),0 13px 25px rgba(3,12,32,.35)!important;
+}
+#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>span{font-size:14px;line-height:1.8;}
+@media(max-width:560px){
+ #bunat-kh-hub #bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>button.kh-btn{flex:1 1 100%!important;width:100%!important;min-width:0!important;max-width:none!important;height:64px!important;min-height:64px!important;max-height:64px!important;}
+}
+@media(prefers-reduced-motion:reduce){#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>button.kh-btn{transition:none!important}}
+</style>
+
+<style id="kh-lab-readable-navy-text">
+/* وضوح أسماء المختبرات وشروحها بالكحلي مع الإبقاء على اللمسة الساحرة */
+#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch{
+  background:linear-gradient(120deg,#f7fbff 0%,#edf4ff 52%,#f8f2ff 100%)!important;
+  border:1px solid rgba(29,78,128,.24)!important;
+  box-shadow:0 8px 22px rgba(18,49,84,.10),inset 0 1px 0 #fff!important;
+}
+#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch:before{
+  color:rgba(29,78,128,.12)!important;
+}
+#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>button.kh-btn{
+  color:#08294b!important;
+  -webkit-text-fill-color:#08294b!important;
+  text-shadow:none!important;
+  background:linear-gradient(135deg,#ffffff 0%,#e8f2ff 48%,#f7edda 100%)!important;
+  border:1px solid #c89e43!important;
+  box-shadow:0 0 0 2px rgba(213,174,83,.15),0 8px 20px rgba(15,43,78,.13),inset 0 1px 0 #fff!important;
+}
+#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>button.kh-btn:before,
+#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>button.kh-btn:after{
+  color:#b58a32!important;
+}
+#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>button.kh-btn:hover,
+#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>button.kh-btn:focus-visible{
+  background:linear-gradient(135deg,#fffdf5 0%,#dcecff 55%,#f8e9c8 100%)!important;
+  box-shadow:0 0 0 3px rgba(213,174,83,.22),0 0 24px rgba(70,119,184,.24),0 12px 24px rgba(15,43,78,.18)!important;
+}
+#bunat-kh-hub [data-kh-panel="research-lab"] .kh-lab-launch>span{
+  color:#0b2948!important;
+  -webkit-text-fill-color:#0b2948!important;
+  text-shadow:none!important;
+  font-weight:900!important;
+}
+</style>
